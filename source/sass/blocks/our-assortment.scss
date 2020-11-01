@@ -1,5 +1,15 @@
 .our-assortment {
-  font-weight: 700;
   font-size: 20px;
-  line-height: 30px;
+  font-weight: 700;
+  color: $main-background-color;
+}
+
+.our-assortment__item {
+  &--interior {
+    background-color: $secondary-color;
+  }
+
+  &--toys {
+    background-color: $secondary-color-medium;
+  }
 }

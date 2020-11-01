@@ -1,5 +1,8 @@
 .button {
-  font-weight: 700;
   font-size: 17px;
+  font-weight: 700;
   line-height: 20px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px solid $main-color-lightest;
 }
