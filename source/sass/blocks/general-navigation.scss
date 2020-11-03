@@ -1,5 +1,7 @@
-.general-navigation {
+.general-navigation a {
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
+  color: $main-color;
+  text-decoration: none;
 }

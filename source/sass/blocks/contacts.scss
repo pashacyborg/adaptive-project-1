@@ -1,11 +1,15 @@
 .contacts {
-  font-weight: 400;
-  font-size: 17px;
-  line-height: 30px;
+
 }
 
 .contacts__title {
-  font-weight: 700;
   font-size: 53px;
+  font-weight: 700;
   line-height: 57px;
+  color: $main-color;
+}
+
+.contacts__email {
+  color: $main-color-lightest;
+  border-bottom: 1px solid $secondary-color-lightest-type1;
 }

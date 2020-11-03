@@ -1,35 +1,30 @@
 .popular-product {
-  font-weight: 400;
-  font-size: 17px;
-  line-height: 30px;
+  font-weight: 700;
 }
 
 .popular-product__title {
-  font-weight: 700;
   font-size: 53px;
   line-height: 57px;
+  color: $main-color;
 }
 
 .popular-product__label {
-  font-weight: 700;
-  font-size: 17px;
   line-height: 17px;
+  color: $secondary-color;
+  text-transform: uppercase;
+}
+
+.popular-product__text {
+  font-weight: 400;
 }
 
 .popular-product__specifications {
-  font-weight: 400;
   font-size: 15px;
   line-height: 20px;
+  font-weight: 400;
 }
 
 .popular-product__price {
-  font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-}
-
-.popular-product__link {
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 20px;
 }

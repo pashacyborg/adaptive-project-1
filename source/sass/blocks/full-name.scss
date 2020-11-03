@@ -1,0 +1,12 @@
+.full-name {
+}
+
+.full-name__title {
+  color: $secondary-color;
+  text-transform: uppercase;
+}
+
+.full-name__title,
+.full-name__label {
+  font-weight: 700;
+}

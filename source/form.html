@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
     <title>Вязание на заказ</title>
   </head>
   <body class="page__body">
@@ -99,19 +100,19 @@
             </ul>
           </fieldset>
           <fieldset class="personal-data__group-2 contact-details">
-            <b class="contact-details__label">Тел</b>
-            <input class="contact-details__input" type="tel" name="mobile" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
-            <b class="contact-details__label">E-mail</b>
-            <input class="contact-details__input" type="email" name="email" placeholder="Ваш Email*">
+            <label class="contact-details__label" for="mobile-field">Тел</label>
+            <input class="contact-details__input" type="tel" name="mobile" id="mobile-field" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+            <label class="contact-details__label" for="email-field">E-mail</label>
+            <input class="contact-details__input" type="email" name="email" id="email-field" placeholder="Ваш Email*">
           </fieldset>
           <div class="personal-data__group-3 wishes">
-            <b class="wishes__label">Доп</b>
-            <textarea class="wishes__textarea" name="text-area" rows="8" cols="80" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <label class="wishes__label" for="text-area-field">Доп</label>
+            <textarea class="wishes__textarea" name="text-area" id="text-area-field" rows="8" cols="80" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </div>
         </section>
         <div class="page-form__outro">
-          <button class="page-form__submit-button" type="submit" name="form-button">Отправить заказ</button>
-          <small>*Поля обязательны для заполнения</small>
+          <button class="page-form__submit-button button button--form" type="submit" name="form-button">Отправить заказ</button>
+          <small class="page-form__notice">*Поля обязательны для заполнения</small>
         </div>
       </form>
     </main>

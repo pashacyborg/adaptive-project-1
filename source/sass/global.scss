@@ -20,5 +20,10 @@ body {
   font-size: 17px;
   font-weight: 400;
   line-height: 30px;
+  color: $main-color-lightest;
   background-color: $main-background-color;
+}
+
+a {
+  text-decoration: none;
 }
