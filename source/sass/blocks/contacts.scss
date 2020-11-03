@@ -1,0 +1,15 @@
+.contacts {
+
+}
+
+.contacts__title {
+  font-size: 53px;
+  font-weight: 700;
+  line-height: 57px;
+  color: $main-color;
+}
+
+.contacts__email {
+  color: $main-color-lightest;
+  border-bottom: 1px solid $secondary-color-lightest-type1;
+}
