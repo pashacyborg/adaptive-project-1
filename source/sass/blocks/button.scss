@@ -1,12 +1,14 @@
 .button {
+  widtH: 260px;
   padding: 15px 20px;
   font-size: 17px;
   font-weight: 700;
   line-height: 20px;
   color: $main-color-lightest;
   background-color: transparent;
-  text-transform: uppercase;
   border: 2px solid $main-color-lightest;
+  text-align: center;
+  text-transform: uppercase;
   &--form,
   &--catalog {
     line-height: 16px;

@@ -1,0 +1,14 @@
+.container {
+  width: $narrow-width;
+  padding: 0 30px;
+
+  @media (min-width: $medium-width) {
+    width: $medium-width;
+    padding: 0 50px;
+  }
+
+  @media (min-width: $wide-width) {
+    width: $wide-width;
+    padding: 0 50px;
+  }
+}

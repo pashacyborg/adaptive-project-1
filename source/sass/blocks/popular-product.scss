@@ -8,6 +8,11 @@
   color: $main-color;
 }
 
+.popular-product__to-order {
+  display: flex;
+  flex-direction: column;
+}
+
 .popular-product__label {
   line-height: 17px;
   color: $secondary-color;

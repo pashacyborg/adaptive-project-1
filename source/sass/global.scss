@@ -14,7 +14,14 @@ input[type="radio"].visually-hidden {
           clip-path: inset(100%);
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
+  min-height: 100%;
+  margin: 0;
+
   font-family: $main-font;
   font-style: normal;
   font-size: 17px;

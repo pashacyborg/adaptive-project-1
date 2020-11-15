@@ -37,8 +37,8 @@
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
         <section class="specifications">
           <h2 class="visually-hidden">Характеристики товара</h2>
-          <fieldset class="specifications__group-1 by-type">
-            <legend class="by-type__title">Тип</legend>
+          <div class="specifications__group-1 by-type">
+            <h3 class="by-type__title">Тип</h3>
             <ul class="by-type__list">
               <li class="by-type__item">
                 <input class="by-type__input" type="radio" name="by-type" id="interior-field" value="interior-accessory" checked>
@@ -49,9 +49,9 @@
                 <label class="by-type__label" for="children-field">Детская игрушка</label>
               </li>
             </ul>
-          </fieldset>
-          <fieldset class="specifications__group-2 by-color">
-            <legend class="by-color__title">Цвет</legend>
+          </div>
+          <div class="specifications__group-2 by-color">
+            <h3 class="by-color__title">Цвет</h3>
             <ul class="by-color__list">
               <li class="by-color__item">
                 <input class="by-color__input" type="checkbox" name="white" id="white-field">
@@ -78,12 +78,12 @@
                 <label class="by-color__label" for="orange-field">Оранжевый</label>
               </li>
             </ul>
-          </fieldset>
+          </div>
         </section>
         <section class="personal-data">
           <h2 class="visually-hidden">Персональные данные</h2>
-          <fieldset class="personal-data__group-1 full-name">
-            <legend class="full-name__title">Фио</legend>
+          <div class="personal-data__group-1 full-name">
+            <h3 class="full-name__title">Фио</h3>
             <ul class="full-name__list">
               <li class="full-name__item">
                 <label class="full-name__label" for="name-field">Имя:</label>
@@ -98,13 +98,13 @@
                 <input class="full-name__input" type="text" name="patronymic" id="patronymic-field" placeholder="Отчество, если желаете">
               </li>
             </ul>
-          </fieldset>
-          <fieldset class="personal-data__group-2 contact-details">
+          </div>
+          <div class="personal-data__group-2 contact-details">
             <label class="contact-details__label" for="mobile-field">Тел</label>
             <input class="contact-details__input" type="tel" name="mobile" id="mobile-field" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
             <label class="contact-details__label" for="email-field">E-mail</label>
             <input class="contact-details__input" type="email" name="email" id="email-field" placeholder="Ваш Email*">
-          </fieldset>
+          </div>
           <div class="personal-data__group-3 wishes">
             <label class="wishes__label" for="text-area-field">Доп</label>
             <textarea class="wishes__textarea" name="text-area" id="text-area-field" rows="8" cols="80" placeholder="Опишите все ваши пожелания к заказу"></textarea>
