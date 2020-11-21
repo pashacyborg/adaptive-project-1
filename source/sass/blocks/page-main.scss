@@ -2,9 +2,24 @@
 
 }
 
+.page-main__intro {
+  background-color: $background-color-header-index;
+}
+
 .page-main__title {
+  font-size: 27px;
+  line-height: 30px;
   font-weight: 700;
-  font-size: 53px;
-  line-height: 57px;
   color: $main-color;
+  text-align: center;
+
+  @media (min-width: $medium-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $wide-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }

@@ -1,8 +1,34 @@
+.our-assortment {
+
+}
+
+.our-assortment__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $medium-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 668px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $wide-width) {
+    width: 1050px;
+  }
+}
+
 .our-assortment__item {
+  background-color: $secondary-color;
+}
+
+.our-assortment__link {
   display: block;
   height: 103px;
+
   &--interior {
-    background-color: $secondary-color;
+    // background-color: $secondary-color;
   }
 
   &--toys {

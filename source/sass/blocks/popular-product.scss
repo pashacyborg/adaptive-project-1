@@ -3,8 +3,8 @@
 }
 
 .popular-product__title {
-  font-size: 53px;
-  line-height: 57px;
+  font-size: 25px;
+  line-height: 30px;
   color: $main-color;
 }
 
@@ -14,12 +14,14 @@
 }
 
 .popular-product__label {
-  line-height: 17px;
+  line-height: 20px;
   color: $secondary-color;
   text-transform: uppercase;
 }
 
 .popular-product__text {
+  font-size: 15px;
+  line-height: 24px;
   font-weight: 400;
 }
 
@@ -30,6 +32,5 @@
 }
 
 .popular-product__price {
-  font-size: 20px;
   line-height: 24px;
 }

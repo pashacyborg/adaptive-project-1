@@ -1,3 +1,22 @@
 .main-nav {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+}
 
+.main-nav__toggle {
+  //подумать че делать с кнопкой
+
+  @media (min-width: $medium-width) {
+    display: none;
+  }
+}
+
+.main-nav__wrapper {
+  @media (min-width: $medium-width) {
+    display: grid;
+//Вот тут не понял закономерности. По идее эти координаты
+//должны быть написаны(я так думаю), но и без них все работает
+    // grid-column: 1 / -1;
+    // grid-row: 1 / -1;
+  }
 }

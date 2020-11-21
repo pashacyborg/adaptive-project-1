@@ -2,13 +2,14 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Интернет-магазин "Мишка"</title>
   </head>
-  <body class="page__body container">
+  <body class="page__body">
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
-        <img src="https://via.placeholder.com/70x70" alt="Интернет-магазин «Мишка»">
+        <img src="https://via.placeholder.com/86x35" alt="Интернет-магазин «Мишка»">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -20,27 +21,33 @@
             <li class="general-navigation__item"><a href="#">Корзина: пока пуста</a></li>
           </ul>
           <ul class="main-nav__list additional-navigation">
-            <li class="additional-navigation__item"><a href="#">Новые поступления</a></li>
-            <li class="additional-navigation__item"><a href="#">Распродажа</a></li>
-            <li class="additional-navigation__item additional-navigation__item--visible"><a href="#">Бесплатная доставка по России</a></li>
+            <li class="additional-navigation__item additional-navigation__item--hidden"><a href="#">Новые поступления</a></li>
+            <li class="additional-navigation__item additional-navigation__item--hidden"><a href="#">Распродажа</a></li>
+            <li class="additional-navigation__item"><a href="#">Бесплатная доставка по России</a></li>
           </ul>
         </div>
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="page-main__title">Милые штуки ручной работы для дома</h1>
+      <div class="page-main__intro">
+        <h1 class="page-main__title container">Милые штуки ручной<br> работы для дома</h1>
+      </div>
       <section class="our-assortment">
         <h2 class="visually-hidden">Основные товары</h2>
-        <div class="our-assortment__list">
-          <a class="our-assortment__item our-assortment__item--interior" href="interior-items.html">
-            <h3 class="our-assortment__title">Предметы интерьера</h3>
-            <img src="https://via.placeholder.com/30x30" alt="Изображение вязанных корзинок">
-          </a>
-          <a class="our-assortment__item our-assortment__item--toys" href="kids-toys.html">
-            <h3 class="our-assortment__title">Детские игрушки</h3>
-            <img src="https://via.placeholder.com/30x30" alt="Изображение вязанных корзинок">
-          </a>
-        </div>
+        <ul class="our-assortment__list">
+          <li class="our-assortment__item">
+            <a class="our-assortment__link our-assortment__link--interior" href="interior-items.html">
+              <h3 class="our-assortment__title">Предметы интерьера</h3>
+              <img src="https://via.placeholder.com/30x30" alt="Изображение вязанных корзинок">
+            </a>
+          </li>
+          <li class="our-assortment__item">
+            <a class="our-assortment__link our-assortment__link--toys" href="kids-toys.html">
+              <h3 class="our-assortment__title">Детские игрушки</h3>
+              <img src="https://via.placeholder.com/30x30" alt="Изображение вязанных корзинок">
+            </a>
+          </li>
+        </ul>
       </section>
       <article class="popular-product">
         <h4 class="popular-product__title">Вязаные корзинки</h4>

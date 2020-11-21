@@ -20,6 +20,7 @@ input[type="radio"].visually-hidden {
 
 body {
   min-height: 100%;
+  min-width: $narrow-width;
   margin: 0 auto;
 
   font-family: $main-font;

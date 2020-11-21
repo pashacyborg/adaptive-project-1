@@ -1,20 +1,43 @@
 .page-header {
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 79px
+                      316px;
+  justify-content: center;
+  align-items: center;
   font-style: normal;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
   color: $main-color;
+
+  @media (min-width: $medium-width) {
+    grid-template-columns: 668px;
+    grid-template-rows: 88px
+                        65px;
+  }
+
+  @media (min-width: $wide-width) {
+    grid-template-columns: 1050px;
+    grid-template-rows: 88px
+                        65px;
+  }
 }
 
 .page-header__logo {
+  display: grid;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  justify-content: center;
   height: 35px;
 
   @media (min-width: $medium-width) {
+    justify-content: start;
     height: 46px;
   }
 
   @media (min-width: $wide-width) {
+    justify-content: center;
     height: 72px;
   }
 }
