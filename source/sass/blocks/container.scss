@@ -1,14 +1,29 @@
+//Контейнер курильщика
+// .container {
+//   width: $narrow-width;
+//   padding: 0 30px;
+//   margin: 0 auto;
+//
+//   @media (min-width: $medium-width) {
+//     width: $medium-width;
+//     padding: 0 50px;
+//   }
+//
+//   @media (min-width: $wide-width) {
+//     width: $wide-width;
+//   }
+// }
+//Новый контейнер. Его можно добавлять самой секции, а не обертке. И все будет работать
 .container {
-  width: $narrow-width;
-  padding: 0 30px;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 260px;
+  justify-content: center;
 
   @media (min-width: $medium-width) {
-    width: $medium-width;
-    padding: 0 50px;
+    grid-template-columns: 668px;
   }
 
   @media (min-width: $wide-width) {
-    width: $wide-width;
+    grid-template-columns: 1050px;
   }
 }

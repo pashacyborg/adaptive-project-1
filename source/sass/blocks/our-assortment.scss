@@ -12,6 +12,9 @@
     grid-template-columns: 1fr 1fr;
     width: 668px;
     margin: 0 auto;
+    //Можно сделать проще
+    //grid-template-columns: 334px 334px;
+    //justify-content: center;
   }
 
   @media (min-width: $wide-width) {
@@ -20,7 +23,7 @@
 }
 
 .our-assortment__item {
-  background-color: $secondary-color;
+  // background-color: $secondary-color;
 }
 
 .our-assortment__link {
@@ -28,7 +31,7 @@
   height: 103px;
 
   &--interior {
-    // background-color: $secondary-color;
+    background-color: $secondary-color;
   }
 
   &--toys {
