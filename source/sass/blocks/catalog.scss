@@ -1,0 +1,21 @@
+.catalog {
+
+}
+
+.catalog__list {
+  display: grid;
+  grid-template-columns: 260px;
+  justify-content: center;
+  row-gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $medium-width) {
+    grid-template-columns: repeat(4, 167px);
+  }
+
+  @media (min-width: $wide-width) {
+    grid-template-columns: repeat(6, 175px);
+  }
+}

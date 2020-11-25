@@ -1,3 +1,18 @@
+.card {
+  border: 1px solid #ECECEC;
+}
+
+.card__image-wrapper {
+
+}
+
+.card__image-link {
+  display: block;
+  width: 260px;
+  height: 195px;
+  background: red;
+}
+
 .card__title-link {
   font-size: 20px;
   font-weight: 700;
