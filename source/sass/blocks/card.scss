@@ -1,31 +1,81 @@
 .card {
-  border: 1px solid #ECECEC;
+  display: grid;
+
+  @media (min-width: $medium-width) and (max-width: $wide-width) {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(4, 167px);
+    grid-auto-flow: column;
+  }
+
+  @media (min-width: $wide-width) {
+    // grid-column: span 2;
+    width: 316px;
+    min-height: 659px;
+  }
 }
 
 .card__image-wrapper {
+  margin: 0;
 
+  @media (min-width: $medium-width) and (max-width: $wide-width) {
+    grid-column: 1 / 3;
+  }
 }
 
 .card__image-link {
   display: block;
-  width: 260px;
   height: 195px;
   background: red;
+
+  @media (min-width: $medium-width) and (max-width: $wide-width) {
+    height: 334px;
+  }
+
+  @media (min-width: $wide-width) {
+    width: 316px;
+    height: 462px;
+  }
 }
 
+.card__info {
+  border: 1px solid $card-frame-color;
+
+  @media (min-width: $medium-width) and (max-width: $wide-width) {
+    grid-column: 3 / 5;
+  }
+}
+
+.card__title {
+  margin: 0;
+}
+
+
 .card__title-link {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 17px;
   line-height: 24px;
+  font-weight: 700;
   color: $main-color;
+
+  @media (min-width: $medium-width) {
+    font-size: 20px;
+  }
 }
 
 .card__specifications {
-  font-size: 15px;
+  font-size: 13px;
   line-height: 30px;
+
+  @media (min-width: $medium-width) {
+    font-size: 15px;
+  }
 }
 
 .card__price {
+  font-size: 15px;
   font-weight: 700;
   line-height: 24px;
+
+  @media (min-width: $medium-width) {
+    font-size: 17px;
+  }
 }
