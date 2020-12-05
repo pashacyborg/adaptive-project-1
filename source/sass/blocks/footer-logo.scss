@@ -3,8 +3,8 @@
   margin: 0;
 
   @media (min-width: $medium-width) {
-    display: grid;
-    align-items: center;
+    display: block;
+    margin: auto 0;
     grid-column: 1 / 2;
   }
 

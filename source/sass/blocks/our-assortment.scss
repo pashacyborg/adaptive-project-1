@@ -1,34 +1,19 @@
 .our-assortment {
-
-}
-
-.our-assortment__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-
   @media (min-width: $medium-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 668px;
-    margin: 0 auto;
-    //Можно сделать проще
-    //grid-template-columns: 334px 334px;
-    //justify-content: center;
+    grid-template-columns: 334px 334px;
+    justify-content: center;
   }
 
   @media (min-width: $wide-width) {
-    width: 1050px;
+    grid-template-columns: 525px 525px;
   }
 }
 
 .our-assortment__item {
-  // background-color: $secondary-color;
-}
-
-.our-assortment__link {
-  display: block;
-  height: 103px;
+  display: grid;
+  grid-template-columns: 260px;
+  justify-content: center;
 
   &--interior {
     background-color: $secondary-color;
@@ -37,17 +22,29 @@
   &--toys {
     background-color: $secondary-color-medium;
   }
+
+  @media (min-width: $medium-width) {
+    grid-template-columns: auto;
+    justify-content: start;
+  }
+}
+
+.our-assortment__link {
+  display: block;
+  min-height: 103px;
 }
 
 .our-assortment__title {
   width: 130px;
   padding: 0;
   margin: 0;
-}
-
-.our-assortment__item h3 {
-  font-size: 20px;
+  font-size: 19px;
+  line-height: 24px;
   font-weight: 700;
-  line-height: 30px;
   color: $main-background-color;
+
+  @media (min-width: $medium-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

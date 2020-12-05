@@ -8,12 +8,10 @@
 
   @media (min-width: $medium-width) {
     grid-template-columns: 668px;
-    grid-template-rows: 90px 330px;
   }
 
   @media (min-width: $wide-width) {
     grid-template-columns: repeat(6, 175px);
-    grid-template-rows: 95px 330px;
   }
 }
 
@@ -21,21 +19,20 @@
   margin: 0;
   font-size: 25px;
   line-height: 30px;
+
   @media (min-width: $medium-width) {
     font-size: 43px;
     line-height: 50px;
   }
 
   @media (min-width: $wide-width) {
-    grid-column: 2 / 5;
+    grid-column: 2 / -2;
     font-size: 53px;
     line-height: 57px;
   }
 }
 
 .advantages__list {
-  display: grid;
-  grid-template-rows: repeat(6, 110px);
   font-size: 17px;
   line-height: 20px;
   margin: 0;
@@ -43,9 +40,9 @@
   list-style: none;
 
   @media (min-width: $medium-width) {
-    grid-row: 2 / 3;
+    display: grid;
     grid-template-columns: repeat(2, 334px);
-    grid-template-rows: repeat(3, 110px);
+    grid-template-rows: repeat(3, minmax(110px, auto));
     grid-auto-flow: column;
     font-size: 20px;
     line-height: 22px;
@@ -53,13 +50,17 @@
 
   @media (min-width: $wide-width) {
     grid-column: 2 / -2;
-    grid-row: 2 / 3;
     grid-template-columns: repeat(2, 350px);
-    grid-template-rows: repeat(3, 110px);
-    row-gap: 10px;
+    grid-template-rows: repeat(3, minmax(110px, auto));
   }
 }
 
 .advantages__item {
-  align-self: end;
+  margin-top: 30px;
+  padding-top: 50px;
+
+  @media (min-width: $medium-width) {
+    margin: 0;
+    padding-top: 80px;
+  }
 }
