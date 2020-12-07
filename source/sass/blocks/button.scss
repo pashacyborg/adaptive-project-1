@@ -1,14 +1,53 @@
 .button {
+  display: block;
+  width: 260px;
+  height: 52px;
   padding: 15px 20px;
   font-size: 17px;
   font-weight: 700;
   line-height: 20px;
   color: $main-color-lightest;
   background-color: transparent;
-  text-transform: uppercase;
   border: 2px solid $main-color-lightest;
-  &--form,
-  &--catalog {
+  text-align: center;
+  text-transform: uppercase;
+
+  &--to-order-index {
+    @media (min-width: $medium-width) {
+      width: 292px;
+    }
+  }
+
+  &--to-submit-index {
+    @media (min-width: $medium-width) {
+      width: 175px;
+    }
+  }
+
+  &--to-contact-index {
+    @media (min-width: $medium-width) {
+      width: 230px;
+    }
+  }
+
+  &--to-order-catalog {
+    width: 192px;
     line-height: 16px;
+
+    @media (min-width: $medium-width) {
+      width: auto;
+    }
+
+    @media (min-width: $wide-width) {
+      width: 230px;
+    }
+  }
+
+  &--to-submit-form {
+    line-height: 16px;
+
+    @media (min-width: $medium-width) {
+      width: 230px;
+    }
   }
 }

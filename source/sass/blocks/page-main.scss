@@ -2,9 +2,32 @@
 
 }
 
+.page-main__intro {
+  min-height: 282px;
+  background-color: $background-color-header-index;
+
+  @media (min-width: $medium-width) {
+    min-height: 561px;
+  }
+}
+
 .page-main__title {
+  margin: 0;
+  padding-top: 70px;
+  font-size: 27px;
+  line-height: 30px;
   font-weight: 700;
-  font-size: 53px;
-  line-height: 57px;
   color: $main-color;
+  text-align: center;
+
+  @media (min-width: $medium-width) {
+    font-size: 43px;
+    line-height: 50px;
+    padding-top: 100px;
+  }
+
+  @media (min-width: $wide-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }

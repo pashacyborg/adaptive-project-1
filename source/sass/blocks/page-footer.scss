@@ -1,5 +1,21 @@
 .page-footer {
+  display: grid;
+  grid-template-columns: 260px;
+  grid-template-rows: minmax(80px, auto)
+                      minmax(80px, auto);
+  justify-content: center;
   font-size: 19px;
   font-weight: 700;
   line-height: 18px;
+  background-color: $main-background-color-medium;
+
+  @media (min-width: $medium-width) {
+    grid-template-columns: repeat(4, 167px);
+    grid-template-rows: minmax(143px, auto);
+  }
+
+  @media (min-width: $wide-width) {
+    grid-template-columns: repeat(6, 175px);
+    grid-template-rows: minmax(143px, auto);
+  }
 }

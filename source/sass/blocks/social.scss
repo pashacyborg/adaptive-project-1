@@ -1,0 +1,39 @@
+.social {
+  grid-row: 1 / 2;
+  display: grid;
+  justify-content: center;
+
+  @media (min-width: $medium-width) {
+    grid-column: 2 / 4;
+    justify-content: start;
+  }
+
+  @media (min-width: $wide-width) {
+    grid-column: 3 / 5;
+  }
+}
+
+.social__list {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  width: 142px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $medium-width) {
+    margin-left: 57px;
+  }
+
+  @media (min-width: $medium-width) {
+    margin-left: 64px;
+  }
+}
+
+.social__item {
+  width: 22px;
+  height: 22px;
+  margin: 0 auto;
+  background: red;
+}

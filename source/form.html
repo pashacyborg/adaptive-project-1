@@ -2,13 +2,14 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Вязание на заказ</title>
   </head>
   <body class="page__body">
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
-        <img src="https://via.placeholder.com/70x70" alt="Интернет-магазин «Мишка»">
+        <img src="https://via.placeholder.com/86x35" alt="Интернет-магазин «Мишка»">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -20,8 +21,8 @@
             <li class="general-navigation__item"><a href="#">Корзина: пока пуста</a></li>
           </ul>
           <ul class="main-nav__list additional-navigation">
-            <li class="additional-navigation__item"><a href="#">Новые поступления</a></li>
-            <li class="additional-navigation__item"><a href="#">Распродажа</a></li>
+            <li class="additional-navigation__item additional-navigation__item--hidden"><a href="#">Новые поступления</a></li>
+            <li class="additional-navigation__item additional-navigation__item--hidden"><a href="#">Распродажа</a></li>
             <li class="additional-navigation__item"><a href="#">Бесплатная доставка по России</a></li>
           </ul>
         </div>
@@ -37,21 +38,21 @@
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
         <section class="specifications">
           <h2 class="visually-hidden">Характеристики товара</h2>
-          <fieldset class="specifications__group-1 by-type">
-            <legend class="by-type__title">Тип</legend>
+          <div class="specifications__group-1 by-type">
+            <h3 class="by-type__title">Тип</h3>
             <ul class="by-type__list">
               <li class="by-type__item">
                 <input class="by-type__input" type="radio" name="by-type" id="interior-field" value="interior-accessory" checked>
-                <label class="by-type__label" for="interior-field">Аксессуар для интерьера</label>
+                <label class="by-type__label by-type__label--interior" for="interior-field">Аксессуар для интерьера</label>
               </li>
               <li class="by-type__item">
                 <input class="by-type__input" type="radio" name="by-type" id="children-field" value="children-toy">
                 <label class="by-type__label" for="children-field">Детская игрушка</label>
               </li>
             </ul>
-          </fieldset>
-          <fieldset class="specifications__group-2 by-color">
-            <legend class="by-color__title">Цвет</legend>
+          </div>
+          <div class="specifications__group-2 by-color">
+            <h3 class="by-color__title">Цвет</h3>
             <ul class="by-color__list">
               <li class="by-color__item">
                 <input class="by-color__input" type="checkbox" name="white" id="white-field">
@@ -78,12 +79,12 @@
                 <label class="by-color__label" for="orange-field">Оранжевый</label>
               </li>
             </ul>
-          </fieldset>
+          </div>
         </section>
         <section class="personal-data">
           <h2 class="visually-hidden">Персональные данные</h2>
-          <fieldset class="personal-data__group-1 full-name">
-            <legend class="full-name__title">Фио</legend>
+          <div class="personal-data__group-1 full-name">
+            <h3 class="full-name__title">Фио</h3>
             <ul class="full-name__list">
               <li class="full-name__item">
                 <label class="full-name__label" for="name-field">Имя:</label>
@@ -98,21 +99,21 @@
                 <input class="full-name__input" type="text" name="patronymic" id="patronymic-field" placeholder="Отчество, если желаете">
               </li>
             </ul>
-          </fieldset>
-          <fieldset class="personal-data__group-2 contact-details">
+          </div>
+          <div class="personal-data__group-2 contact-details">
             <label class="contact-details__label" for="mobile-field">Тел</label>
             <input class="contact-details__input" type="tel" name="mobile" id="mobile-field" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
             <label class="contact-details__label" for="email-field">E-mail</label>
             <input class="contact-details__input" type="email" name="email" id="email-field" placeholder="Ваш Email*">
-          </fieldset>
+          </div>
           <div class="personal-data__group-3 wishes">
             <label class="wishes__label" for="text-area-field">Доп</label>
-            <textarea class="wishes__textarea" name="text-area" id="text-area-field" rows="8" cols="80" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <textarea class="wishes__textarea" name="text-area" id="text-area-field" rows="" cols="" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </div>
         </section>
         <div class="page-form__outro">
-          <button class="page-form__submit-button button button--form" type="submit" name="form-button">Отправить заказ</button>
           <small class="page-form__notice">*Поля обязательны для заполнения</small>
+          <button class="page-form__submit-button button button--to-submit-form" type="submit" name="form-button">Отправить заказ</button>
         </div>
       </form>
     </main>

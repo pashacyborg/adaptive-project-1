@@ -1,7 +1,110 @@
-.general-navigation a {
+.general-navigation {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $medium-width) {
+    grid-template-columns: repeat(4, 167px);
+    grid-template-rows: 88px
+                        65px;
+  }
+
+  @media (min-width: $wide-width) {
+    grid-template-columns: repeat(6, 175px);
+    grid-template-rows: 88px
+                        65px;
+  }
+}
+
+.general-navigation__item {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 79px;
+  box-shadow: 0px 1px 0px #ECECEC,
+              inset 0px 1px 0px #ECECEC;
+
+  @media (min-width: $medium-width) {
+    height: auto;
+    box-shadow: none;
+  }
+
+  &:first-child {
+    @media (min-width: $medium-width) {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      justify-content: start;
+    }
+
+    @media (min-width: $wide-width) {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      justify-content: start;
+    }
+  }
+
+  &:nth-child(2) {
+    @media (min-width: $medium-width) {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      justify-content: start;
+    }
+
+    @media (min-width: $wide-width) {
+      grid-column: 2 / 4;
+      grid-row: 1 / 2;
+      justify-content: start;
+      padding-left: 45px;
+    }
+  }
+
+  &:nth-child(3) {
+    @media (min-width: $medium-width) {
+      display: none;
+      //стили для будущей иконки
+      // grid-column: 3 / 4;
+      // grid-row: 1 / 2;
+      // justify-content: start;
+    }
+  }
+
+  &:last-child {
+    @media (min-width: $medium-width) {
+      grid-column: 3 / 5;
+      grid-row: 1 / 2;
+      justify-content: end;
+    }
+
+    @media (min-width: $wide-width) {
+      grid-column: 5 / 7;
+      grid-row: 1 / 2;
+      justify-content: end;
+    }
+  }
+}
+
+.general-navigation__item a {
+  width: 260px;
+  padding-left: 46px;
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
   color: $main-color;
   text-decoration: none;
+
+  @media (min-width: $medium-width) {
+    width: auto;
+    padding: 0;
+  }
+}
+
+.general-navigation__item:first-child a,
+.general-navigation__item:nth-child(2) a {
+  @media (min-width: $medium-width) and (max-width: $wide-width) {
+    font-size: 15px;
+    line-height: 24px;
+  }
 }

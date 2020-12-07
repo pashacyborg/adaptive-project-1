@@ -2,13 +2,14 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Каталог</title>
   </head>
   <body class="page__body">
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
-        <img src="https://via.placeholder.com/70x70" alt="Интернет-магазин «Мишка»">
+        <img src="https://via.placeholder.com/86x35" alt="Интернет-магазин «Мишка»">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -20,15 +21,15 @@
             <li class="general-navigation__item"><a href="#">Корзина: пока пуста</a></li>
           </ul>
           <ul class="main-nav__list additional-navigation">
-            <li class="additional-navigation__item"><a href="#">Новые поступления</a></li>
-            <li class="additional-navigation__item"><a href="#">Распродажа</a></li>
+            <li class="additional-navigation__item additional-navigation__item--hidden"><a href="#">Новые поступления</a></li>
+            <li class="additional-navigation__item additional-navigation__item--hidden"><a href="#">Распродажа</a></li>
             <li class="additional-navigation__item"><a href="#">Бесплатная доставка по России</a></li>
           </ul>
         </div>
       </nav>
     </header>
     <main class="page-catalog">
-      <h1 class="page-catalog__title">Каталог товаров</h1>
+      <h1 class="page-catalog__title container">Каталог товаров</h1>
       <section class="catalog">
         <h2 class="visually-hidden">Карточки товаров:</h2>
         <ul class="catalog__list">
@@ -79,18 +80,20 @@
           </li>
         </ul>
         <article class="catalog-article">
-          <p class="catalog-article__image-wrapper">
-            <a href="" class="catalog-article__image-link">
-              <img src="https://via.placeholder.com/150x100" alt="Интернет-магазин «Мишка»">
-            </a>
-          </p>
-          <div class="catalog-article__info">
-            <h3 class="catalog-article__title"><a class="catalog-article__title-link">Процесс производства</a></h3>
-            <p class="catalog-article__description">По просьбам наших любимых фолловеров мы сняли для вас
-               подробное видео о том, как появляются наши товары.</p>
-            <p class="catalog-article__to-order">
-              <a class="catalog-article__link button button--catalog" href="#">Сделать заказ</a>
+          <div class="catalog-article__wrapper">
+            <p class="catalog-article__image-wrapper">
+              <a href="" class="catalog-article__image-link">
+                <img src="https://via.placeholder.com/150x100" alt="Интернет-магазин «Мишка»">
+              </a>
             </p>
+            <div class="catalog-article__info">
+              <h3 class="catalog-article__title"><a class="catalog-article__title-link">Процесс производства</a></h3>
+              <p class="catalog-article__description">По просьбам наших любимых фолловеров мы сняли для вас
+                 подробное видео о том, как появляются наши товары.</p>
+              <p class="catalog-article__to-order">
+                <a class="catalog-article__link button button--to-order-catalog" href="#">Сделать заказ</a>
+              </p>
+            </div>
           </div>
         </article>
       </section>

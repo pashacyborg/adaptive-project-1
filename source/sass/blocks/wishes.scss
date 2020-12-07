@@ -1,5 +1,43 @@
+.wishes {
+  display: grid;
+  grid-template-columns: 260px;
+  justify-content: center;
+
+  @media (min-width: $medium-width) {
+    grid-template-columns: repeat(4, 167px);
+  }
+
+  @media (min-width: $wide-width) {
+    grid-template-columns: repeat(6, 175px);
+  }
+}
+
 .wishes__label {
+  line-height: 16px;
   font-weight: 700;
   color: $secondary-color;
   text-transform: uppercase;
+
+  @media (min-width: $medium-width) {
+    grid-column: 1 / 2;
+  }
+
+  @media (min-width: $wide-width) {
+    padding-left: 60px;
+  }
+}
+
+.wishes__textarea {
+  width: 260px;
+  min-height: 142px;
+
+  @media (min-width: $medium-width) {
+    grid-column: 2 / -1;
+    width: 501px;
+  }
+
+  @media (min-width: $wide-width) {
+    grid-column: 2 / -2;
+    width: 700px;
+  }
 }

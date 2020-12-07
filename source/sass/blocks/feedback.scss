@@ -1,21 +1,72 @@
 .feedback {
+  display: grid;
+  grid-template-columns: 260px;
+  justify-content: center;
+  margin-top: 55px;
 
+  @media (min-width: $medium-width) {
+    grid-template-columns: 668px;
+    // grid-template-rows: 171px 181px 105px;
+  }
+
+  @media (min-width: $wide-width) {
+    grid-template-columns: 1050px;
+    // grid-template-columns: repeat(6, 175px);
+    // grid-template-rows: 170px 134px 153px;
+  }
 }
 
 .feedback__title {
-  font-size: 53px;
+  font-size: 25px;
+  line-height: 30px;
   font-weight: 700;
-  line-height: 57px;
+  margin: 0;
   color: $main-color;
+
+  @media (min-width: $medium-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $wide-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
+.feedback__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.feedback__review {
+  margin: 0;
 }
 
 .feedback__text {
+  font-size: 15px;
 
+  @media (min-width: $medium-width) {
+    font-size: 17px;
+  }
+
+}
+
+.feedback__author {
+  line-height: 24px;
+
+  @media (min-width: $medium-width) {
+    line-height: 30px;
+  }
+
+  @media (min-width: $medium-width) {
+    line-height: 24px;
+  }
 }
 
 .feedback__name {
   font-weight: 700;
-  line-height: 24px;
   color: $main-color;
 }
 
@@ -23,5 +74,5 @@
 
 }
 
-.feedback__submit {
+.feedback__to-submit {
 }

@@ -1,10 +1,138 @@
+//Протестировать гепотезу с grid-template-rows: auto 1fr 1fr для
+//Карточки каталога(большой). Комбинации этих свойств
+
+.catalog-article {
+  //Тестировать display: contents для карточки товара
+  display: grid;
+  grid-template-columns: 260px;
+  justify-content: center;
+  padding-top: 30px;
+
+  @media (min-width: $medium-width) {
+    grid-template-columns: repeat(4, 167px);
+    padding-top: 53px;
+  }
+
+  @media (min-width: $wide-width) {
+    grid-template-columns: 1050px;
+    padding-top: 57px;
+  }
+}
+
+.catalog-article__wrapper {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  display: grid;
+  // grid-template-rows: 96px 150px 131px 126px;
+  grid-template-rows: minmax(96px, auto)
+                      minmax(150px, auto)
+                      minmax(150px, auto)
+                      minmax(107px, auto);
+  border: 1px solid $card-frame-color;
+
+  @media (min-width: $medium-width) {
+    grid-template-rows: minmax(455px, auto)
+                        minmax(288px, auto);
+    border: none;
+  }
+
+  @media (min-width: $wide-width) {
+    grid-template-columns: minmax(682px, auto) minmax(368px, auto);
+    grid-template-rows: auto;
+  }
+}
+
+.catalog-article__image-wrapper {
+  margin: 0;
+
+  @media (max-width: $narrow-width-only) {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    //Почему эти свойства не наследуются наверх(на wide-width?)
+  }
+
+  @media (min-width: $medium-width) {
+    grid-row: 1 / 2;
+  }
+}
+
+.catalog-article__image-link {
+  display: block;
+  min-height: 150px;
+  background: red;
+
+  @media (min-width: $medium-width) {
+    min-height: 455px;
+  }
+
+  @media (min-width: $wide-width) {
+
+  }
+}
+
+.catalog-article__info {
+  border: 1px solid $card-frame-color;
+
+  @media (max-width: $narrow-width-only) {
+    display: contents;
+  }
+
+  @media (min-width: $medium-width) {
+    padding: 40px;
+  }
+
+  @media (min-width: $medium-width) and (max-width: $wide-width) {
+    border-top: none;
+  }
+
+  @media (min-width: $wide-width) {
+    // padding: 96px 10px 0px 79px;
+    border-left: none;
+  }
+}
+
+//Этот элемент при переполнении ведет себя плохо. Че делать?
 .catalog-article__title {
-  font-size: 20px;
+  @media (max-width: $narrow-width-only) {
+    grid-row: 1 / 2;
+  }
+
+  font-size: 17px;
   font-weight: 700;
   line-height: 24px;
   color: $main-color;
+  margin: 0;
+
+  @media (min-width: $medium-width) {
+    font-size: 20px;
+  }
 }
 
 .catalog-article__description {
-  font-size: 15px;
+  margin: 0;
+  font-size: 13px;
+  line-height: 24px;
+
+  @media (max-width: $narrow-width-only) {
+    grid-row: 3 / 4;
+    padding: 35px 30px 0px 34px;
+  }
+
+  @media (min-width: $medium-width) {
+    font-size: 15px;
+    line-height: 30px;
+  }
+}
+
+.catalog-article__to-order {
+  @media (max-width: $narrow-width-only) {
+    grid-row: 4 / 5;
+    align-self: center;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $wide-width) {
+    width: 230px;
+    margin: 0 auto;
+  }
 }

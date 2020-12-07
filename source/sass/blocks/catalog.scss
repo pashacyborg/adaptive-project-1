@@ -1,0 +1,27 @@
+.catalog {
+
+}
+
+.catalog__list {
+  display: grid;
+  grid-template-columns: 260px;
+  justify-content: center;
+  row-gap: 30px;
+  margin: 0;
+  padding: 0;
+  padding-top: 30px;
+  list-style: none;
+
+  @media (min-width: $medium-width) {
+    grid-template-columns: repeat(4, 167px);
+    row-gap: 54px;
+    padding-top: 67px;
+  }
+
+  @media (min-width: $wide-width) {
+    grid-template-columns: repeat(3, 316px);
+    row-gap: 57px;
+    column-gap: 51px;
+    padding-top: 111px;
+  }
+}

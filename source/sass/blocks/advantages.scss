@@ -1,12 +1,66 @@
 .advantages {
-  font-size: 20px;
+  display: grid;
+  grid-template-columns: 260px;
+  justify-content: center;
+  margin-top: 30px;
   font-weight: 700;
-  line-height: 22px;
   color: $main-color;
+
+  @media (min-width: $medium-width) {
+    grid-template-columns: 668px;
+  }
+
+  @media (min-width: $wide-width) {
+    grid-template-columns: repeat(6, 175px);
+  }
 }
 
 .advantages__title {
-  font-size: 53px;
-  font-weight: 700;
-  line-height: 57px;
+  margin: 0;
+  font-size: 25px;
+  line-height: 30px;
+
+  @media (min-width: $medium-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $wide-width) {
+    grid-column: 2 / -2;
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
+.advantages__list {
+  font-size: 17px;
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $medium-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 334px);
+    grid-template-rows: repeat(3, minmax(110px, auto));
+    grid-auto-flow: column;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @media (min-width: $wide-width) {
+    grid-column: 2 / -2;
+    grid-template-columns: repeat(2, 350px);
+    grid-template-rows: repeat(3, minmax(110px, auto));
+  }
+}
+
+.advantages__item {
+  margin-top: 30px;
+  padding-top: 50px;
+
+  @media (min-width: $medium-width) {
+    margin: 0;
+    padding-top: 80px;
+  }
 }

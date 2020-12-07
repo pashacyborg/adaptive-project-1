@@ -1,3 +1,21 @@
 .main-nav {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  display: grid;
+}
 
+.main-nav__toggle {
+  //подумать че делать с кнопкой
+
+  @media (min-width: $medium-width) {
+    display: none;
+  }
+}
+
+.main-nav__wrapper {
+  @media (min-width: $medium-width) {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    display: grid;
+  }
 }
