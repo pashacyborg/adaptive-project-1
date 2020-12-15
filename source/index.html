@@ -8,26 +8,34 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img src="https://via.placeholder.com/86x35" alt="Интернет-магазин «Мишка»">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list general-navigation">
-            <li class="general-navigation__item"><a href="catalog.html">Каталог товаров</a></li>
-            <li class="general-navigation__item"><a href="form.html">Вязание на заказ</a></li>
-            <li class="general-navigation__item"><a href="#">Поиск по сайту</a></li>
-            <li class="general-navigation__item"><a href="#">Корзина: пока пуста</a></li>
-          </ul>
-          <ul class="main-nav__list additional-navigation">
-            <li class="additional-navigation__item additional-navigation__item--hidden"><a href="#">Новые поступления</a></li>
-            <li class="additional-navigation__item additional-navigation__item--hidden"><a href="#">Распродажа</a></li>
-            <li class="additional-navigation__item"><a href="#">Бесплатная доставка по России</a></li>
-          </ul>
-        </div>
+      <p class="page-header__logo-wrapper">
+        <a class="page-header__logo-link" href="index.html">
+          <img src="https://via.placeholder.com/86x35" alt="Интернет-магазин «Мишка»">
+        </a>
+      </p>
+      <nav class="page-header__main-nav page-header__main-nav--general">
+        <ul class="main-nav main-nav--general">
+          <li class="main-nav--general__item"><a class="main-nav--general__link" href="catalog.html"><span class="main-nav--general__wrapper">Каталог товаров</span></a></li>
+          <li class="main-nav--general__item"><a class="main-nav--general__link" href="form.html"><span class="main-nav--general__wrapper">Вязание на заказ</span></a></li>
+        </ul>
       </nav>
+      <nav class="page-header__main-nav page-header__main-nav--search">
+        <ul class="main-nav main-nav--search">
+          <li class="main-nav--search__item"><a class="main-nav--search__link" href="#"><span class="main-nav--search__wrapper">Поиск по сайту</span></a></li>
+          <li class="main-nav--search__item"><a class="main-nav--search__link" href="#"><span class="main-nav--search__wrapper">Корзина: пока пуста</span></a></li>
+        </ul>
+      </nav>
+      <nav class="page-header__main-nav page-header__main-nav--promo">
+        <ul class="main-nav main-nav--promo">
+          <li class="main-nav--promo__item main-nav--promo__item--hidden"><a class="main-nav--promo__link" href="#"><span class="main-nav--promo__wrapper">Новые поступления</span></a></li>
+          <li class="main-nav--promo__item main-nav--promo__item--hidden"><a class="main-nav--promo__link" href="#"><span class="main-nav--promo__wrapper">Распродажа</span></a></li>
+          <li class="main-nav--promo__item"><a class="main-nav--promo__link" href="#"><span class="promo-navigation__wrapper">Бесплатная доставка по России</span></a></li>
+        </ul>
+      </nav>
+      <div class="page-header__paint"></div>
     </header>
+
+
     <main class="page-main">
       <div class="page-main__intro container">
         <h1 class="page-main__title">Милые штуки ручной<br> работы для дома</h1>
