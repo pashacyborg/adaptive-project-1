@@ -88,6 +88,10 @@
   margin: 0;
   padding: 0;
 
+  &--key {
+    vertical-align: top;
+  }
+
   &--value {
     padding-left: 32px;
   }
@@ -99,7 +103,7 @@
 }
 
 .contacts__address {
-
+  margin: 0;
 }
 
 .contacts__map-wrapper {

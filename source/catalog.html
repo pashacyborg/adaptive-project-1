@@ -13,37 +13,28 @@
           <img src="https://via.placeholder.com/86x35" alt="Интернет-магазин «Мишка»">
         </a>
       </p>
-      <nav class="main-nav">
-        <button class="main-nav__navigation-toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <ul class="main-nav__list-1 general-navigation">
-          <li class="general-navigation__item">
-            <a class="general-navigation__link" href="catalog.html"><span class="general-navigation__wrapper">Каталог товаров</span></a>
-          </li>
-          <li class="general-navigation__item">
-            <a class="general-navigation__link" href="form.html"><span class="general-navigation__wrapper">Вязание на заказ</span></a>
-          </li>
-        </ul>
-        <ul class="main-nav__list-2 search-navigation">
-          <li class="search-navigation__item">
-            <a class="search-navigation__link" href="#"><span class="search-navigation__wrapper">Поиск по сайту</span></a>
-          </li>
-          <li class="search-navigation__item">
-            <a class="search-navigation__link" href="#"><span class="search-navigation__wrapper">Корзина: пока пуста</span></a>
-          </li>
-        </ul>
-        <ul class="main-nav__list-3 promo-navigation">
-          <li class="promo-navigation__item promo-navigation__item--hidden">
-            <a href="#"><span class="promo-navigation__wrapper">Новые поступления</span></a>
-          </li>
-          <li class="promo-navigation__item promo-navigation__item--hidden">
-            <a href="#"><span class="promo-navigation__wrapper">Распродажа</span></a>
-          </li>
-          <li class="promo-navigation__item">
-            <a href="#"><span class="promo-navigation__wrapper">Бесплатная доставка по России</span></a>
-          </li>
+      <nav class="page-header__main-nav page-header__main-nav--general">
+        <ul class="main-nav main-nav--general">
+          <li class="main-nav__item main-nav__item--catalog"><a class="main-nav__link main-nav__link--catalog" href="catalog.html"><span class="main-nav__wrapper">Каталог товаров</span></a></li>
+          <li class="main-nav__item main-nav__item--knitting-to-order"><a class="main-nav__link main-nav__link--knitting-to-order" href="form.html"><span class="main-nav__wrapper">Вязание на заказ</span></a></li>
         </ul>
       </nav>
+      <nav class="page-header__main-nav page-header__main-nav--search">
+        <ul class="main-nav main-nav--search">
+          <li class="main-nav__item main-nav__item--site-search"><a class="main-nav__link" href="#"><span class="main-nav__wrapper main-nav__wrapper--site-search">Поиск по сайту</span></a></li>
+          <li class="main-nav__item main-nav__item--basket"><a class="main-nav__link main-nav__link--basket" href="#"><span class="main-nav__wrapper">Корзина: пока пуста</span></a></li>
+        </ul>
+      </nav>
+      <nav class="page-header__main-nav page-header__main-nav--promo">
+        <ul class="main-nav main-nav--promo">
+          <li class="main-nav__item main-nav__item--new-arrivals main-nav__item--hidden"><a class="main-nav__link" href="#"><span class="main-nav__wrapper">Новые поступления</span></a></li>
+          <li class="main-nav__item main-nav__item--sale main-nav__item--hidden"><a class="main-nav__link" href="#"><span class="main-nav__wrapper">Распродажа</span></a></li>
+          <li class="main-nav__item main-nav__item--delivery"><a class="main-nav__link main-nav__link--delivery" href="#"><span class="main-nav__wrapper">Бесплатная доставка по России</span></a></li>
+        </ul>
+      </nav>
+      <div class="page-header__paint page-header__paint--dark"></div>
     </header>
+
     <main class="page-catalog">
       <h1 class="page-catalog__title container">Каталог товаров</h1>
       <section class="catalog">
