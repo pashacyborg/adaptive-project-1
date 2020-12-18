@@ -38,7 +38,7 @@
 }
 
 .card__info {
-  border: 1px solid $card-frame-color;
+  border: 1px solid $frame-color;
 
   @media (min-width: $medium-width) and (max-width: $wide-width) {
     grid-column: 3 / 5;

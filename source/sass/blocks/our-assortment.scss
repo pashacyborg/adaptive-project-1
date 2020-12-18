@@ -32,10 +32,22 @@
 .our-assortment__link {
   display: block;
   min-height: 103px;
+
+  @media (min-width: $medium-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 334px;
+    padding: 0 45px;
+  }
+
+  @media (min-width: $wide-width) {
+    width: 525px;
+  }
 }
 
 .our-assortment__title {
-  width: 130px;
+
   padding: 0;
   margin: 0;
   font-size: 19px;

@@ -36,5 +36,44 @@
 
   @media (min-width: $medium-width) {
     grid-column: 2 / -1;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $wide-width) {
+    display: grid;
+    grid-template-columns: 262px 264px 1fr;
+    grid-template-rows: auto auto;
+    grid-auto-flow: column;
+  }
+}
+
+.by-color__item {
+  @media (min-width: $medium-width) and (max-width: $medium-width-limit) {
+    width: 220px;
+
+    &--white {
+      order: 1;
+    }
+
+    &--black {
+      order: 4;
+    }
+
+    &--grey {
+      order: 2;
+    }
+
+    &--pink {
+      order: 5;
+    }
+
+    &--tiffany {
+      order: 3;
+    }
+
+    &--orange {
+      order: 6;
+    }
   }
 }
