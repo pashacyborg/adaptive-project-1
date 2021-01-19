@@ -130,7 +130,7 @@
 }
 
 .contacts__contact-button {
-  @media (max-width: $wide-width) {
+  @media (max-width: $medium-width-limit) {
     margin: 0 auto;
   }
 }

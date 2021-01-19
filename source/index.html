@@ -10,9 +10,10 @@
     <header class="page-header">
       <p class="page-header__logo-wrapper">
         <a class="page-header__logo-link" href="index.html">
-          <img src="https://via.placeholder.com/86x35" alt="Интернет-магазин «Мишка»">
+          <img src="img/logo-mobile.svg" width="85.6px" height="35px" alt="Интернет-магазин «Мишка»">
         </a>
       </p>
+      <button class="page-header__navigation-toggle page-header__navigation-toggle--closed page-header__navigation-toggle--opened" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <nav class="page-header__main-nav page-header__main-nav--general">
         <ul class="main-nav main-nav--general">
           <li class="main-nav__item main-nav__item--catalog"><a class="main-nav__link main-nav__link--catalog" href="catalog.html"><span class="main-nav__wrapper">Каталог товаров</span></a></li>
@@ -21,8 +22,18 @@
       </nav>
       <nav class="page-header__main-nav page-header__main-nav--search">
         <ul class="main-nav main-nav--search">
-          <li class="main-nav__item main-nav__item--site-search"><a class="main-nav__link" href="#"><span class="main-nav__wrapper main-nav__wrapper--site-search">Поиск по сайту</span></a></li>
-          <li class="main-nav__item main-nav__item--basket"><a class="main-nav__link main-nav__link--basket" href="#"><span class="main-nav__wrapper">Корзина: пока пуста</span></a></li>
+          <li class="main-nav__item main-nav__item--site-search">
+            <a class="main-nav__link main-nav__link--site-search" href="#">
+              <svg class="main-nav__icon main-nav__icon--site-search" width="17.6" height="17.6" viewBox="-0.8 -0.8 17.6 17.6"><path d="M16.5 15L13 11.4A7.7 7.7 0 006.9-.8a7.7 7.7 0 104.6 13.9l3.4 3.4c.2.2.4.3.8.3.6 0 1.1-.5 1.1-1.1 0-.2 0-.5-.3-.8zM1.4 6.8a5.5 5.5 0 1111 0 5.5 5.5 0 01-11 0z"/></svg>
+              <span class="main-nav__wrapper main-nav__wrapper--site-search">Поиск по сайту</span>
+            </a>
+          </li>
+          <li class="main-nav__item main-nav__item--basket">
+            <a class="main-nav__link main-nav__link--basket" href="#">
+              <svg class="main-nav__icon main-nav__icon--basket" width="20.3" height="18.8" viewBox="264.2 371 20.3 18.8"><path d="M283.8 378.2h-3.2l-3.4-6.8a.7.7 0 10-1.3.6l3 6.2h-9.1l3-6.2a.7.7 0 00-1.3-.6l-3.4 6.8H265a.8.8 0 000 1.5h.1l.9 3c-.2.1-.3.3-.3.6 0 .4.3.7.7.7l1.6 5.8h12.7l1.7-5.8c.3 0 .7-.3.7-.7 0-.3-.2-.5-.4-.6l.9-3h.2a.8.8 0 100-1.5zm-4.2 10.1H269L268 384h12.9l-1.2 4.3zm1.6-5.8h-13.7l-.8-2.8H282l-.8 2.8z"/></svg>
+              <span class="main-nav__wrapper">Корзина: пока пуста</span>
+            </a>
+          </li>
         </ul>
       </nav>
       <nav class="page-header__main-nav page-header__main-nav--promo">
@@ -32,10 +43,8 @@
           <li class="main-nav__item main-nav__item--delivery"><a class="main-nav__link main-nav__link--delivery" href="#"><span class="main-nav__wrapper">Бесплатная доставка по России</span></a></li>
         </ul>
       </nav>
-      <div class="page-header__paint"></div>
+      <div class="page-header__paint"><span class="visually-hidden">Фон для хедера</span></div>
     </header>
-
-
     <main class="page-main">
       <div class="page-main__intro container">
         <h1 class="page-main__title">Милые штуки ручной<br> работы для дома</h1>
@@ -43,15 +52,13 @@
       <section class="our-assortment">
         <h2 class="visually-hidden">Основные товары</h2>
         <div class="our-assortment__item our-assortment__item--interior">
-          <a class="our-assortment__link" href="interior-items.html">
+          <a class="our-assortment__link our-assortment__link--interior" href="interior-items.html">
             <h3 class="our-assortment__title">Предметы<br> интерьера</h3>
-            <img src="https://via.placeholder.com/30x30" alt="Изображение вязанных корзинок">
           </a>
         </div>
         <div class="our-assortment__item our-assortment__item--toys">
-          <a class="our-assortment__link" href="kids-toys.html">
+          <a class="our-assortment__link our-assortment__link--toys" href="kids-toys.html">
             <h3 class="our-assortment__title">Детские<br> игрушки</h3>
-            <img src="https://via.placeholder.com/30x30" alt="Изображение вязанных корзинок">
           </a>
         </div>
       </section>

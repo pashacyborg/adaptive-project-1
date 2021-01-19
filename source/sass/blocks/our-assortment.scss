@@ -17,10 +17,18 @@
 
   &--interior {
     background-color: $secondary-color;
+
+    &:hover {
+      background-color: $secondary-color--hover;
+    }
   }
 
   &--toys {
     background-color: $secondary-color-medium;
+
+    &:hover {
+      background-color: $secondary-color-medium--hover;
+    }
   }
 
   @media (min-width: $medium-width) {
@@ -30,15 +38,59 @@
 }
 
 .our-assortment__link {
+  position: relative;
   display: block;
   min-height: 103px;
+  padding: 25px 112px 25px 0px;
+
+  &--interior {
+    &::before {
+      position: absolute;
+      top: 23px;
+      right: 6px;
+      content: "";
+      width: 40px;
+      height: 62px;
+      background-image: url(../img/our-assortment__interior-img.svg);
+      opacity: 0.5;
+
+      &:hover {
+        opacity: 0.7;
+      }//Почему не работает opacity на ховер и фокус?
+
+      @media (min-width: $medium-width) {
+        top: 30px;
+        right: 36px;
+      }
+    }
+  }
+
+  &--toys {
+    &::before {
+      position: absolute;
+      top: 21px;
+      right: -3px;
+      content: "";
+      width: 60px;
+      height: 60px;
+      background-image: url(../img/our-assortment__toys-img.svg);
+      opacity: 0.5;
+
+      @media (min-width: $medium-width) {
+        top: 31px;
+        right: 33px;
+      }
+
+      @media (min-width: $wide-width) {
+        right: 35px;
+      }
+    }
+  }
 
   @media (min-width: $medium-width) {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 334px;
-    padding: 0 45px;
+    padding-left: 45px;
   }
 
   @media (min-width: $wide-width) {

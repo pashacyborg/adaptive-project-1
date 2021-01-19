@@ -78,7 +78,7 @@
     padding: 40px;
   }
 
-  @media (min-width: $medium-width) and (max-width: $wide-width) {
+  @media (min-width: $medium-width) and (max-width: $medium-width-limit) {
     border-top: none;
   }
 

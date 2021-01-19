@@ -41,34 +41,80 @@
 
 .page-header__logo-link {
   display: block;
-  width: 86px;
-  min-height: 35px;
+  width: 85.6px;
+  height: 35px;
   margin: 0 auto;
-  background-color: red;
 
   @media (min-width: $medium-width) {
-    width: 113px;
-    min-height: 46px;
+    width: 112.4px;
+    height: 46.1px;
     margin: 0;
   }
 
   @media (min-width: $wide-width) {
-
-    height: 72px;
+    width: 148.1px;
+    height: 72.7px;
   }
 }
 
 .page-header__logo-link img {
+  &:hover {
+    opacity: 0.6;
+  }
 
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-header__navigation-toggle {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 30px;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-left: 109px;
+  border: none;
+  // outline: none;
+  background-color: $main-background-color;
 
   @media (min-width: $medium-width) {
     display: none;
+  }
+
+  // &--closed {
+  //   &::before {
+  //     content: "";
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     width: 20px;
+  //     height: 2px;
+  //     background-color: $main-color;
+  //     box-shadow: 0 6px 0 0 $main-color,
+  //                 0 12px 0 0 $main-color;
+  //   }
+  // }
+
+  &--opened {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      right: -1px;
+      width: 22px;
+      height: 2px;
+      background-color: $main-color;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
   }
 }
 
