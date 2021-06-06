@@ -9,7 +9,7 @@
 
   @media (min-width: $medium-width) {
     display: grid;
-    grid-template-columns: 1fr 320px 348px 1fr;
+    grid-template-columns: 1fr 321px 349px 1fr;
     grid-template-rows: minmax(88px, auto)
                         minmax(50px, auto);
   }
@@ -21,7 +21,6 @@
 
 .page-header__logo-wrapper {
   display: flex;
-  align-items: center;
   margin: 0;
   min-height: 79px;
 
@@ -44,6 +43,8 @@
   width: 85.6px;
   height: 35px;
   margin: 0 auto;
+  margin-top: 22px;
+  //background: red;
 
   @media (min-width: $medium-width) {
     width: 112.4px;
@@ -69,11 +70,11 @@
 
 .page-header__navigation-toggle {
   position: absolute;
-  top: 30px;
+  top: 31px;
   left: 50%;
   width: 20px;
   height: 20px;
-  margin-left: 109px;
+  margin-left: 117px;
   border: none;
   // outline: none;
   background-color: $main-background-color;
@@ -82,30 +83,44 @@
     display: none;
   }
 
-  // &--closed {
-  //   &::before {
-  //     content: "";
-  //     position: absolute;
-  //     top: 0;
-  //     left: 0;
-  //     width: 20px;
-  //     height: 2px;
-  //     background-color: $main-color;
-  //     box-shadow: 0 6px 0 0 $main-color,
-  //                 0 12px 0 0 $main-color;
-  //   }
-  // }
+  &--closed {
+    //С помощью JS: добавлять данный класс, убирать класс --opened. При повторном клике наоборот
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 2px;
+      background-color: $main-color;
+      box-shadow: 0 6px 0 0 $main-color,
+      0 12px 0 0 $main-color;
+      transform: none;
+    }
+
+    &:hover::before,
+    &:hover::after {
+      opacity: 0.4;
+    }
+
+    &:active::before,
+    &:active::after {
+      opacity: 0.2;
+    }
+  }
 
   &--opened {
+
     &::before,
     &::after {
       content: "";
       position: absolute;
-      top: 10px;
-      right: -1px;
-      width: 22px;
+      top: 7px;
+      left: -3px;
+      width: 26px;
       height: 2px;
       background-color: $main-color;
+      box-shadow: none;
     }
 
     &::before {
@@ -114,6 +129,15 @@
 
     &::after {
       transform: rotate(45deg);
+    }
+    &:hover::before,
+    &:hover::after {
+      opacity: 0.4;
+    }
+
+    &:active::before,
+    &:active::after {
+      opacity: 0.2;
     }
   }
 }
@@ -156,6 +180,12 @@
       grid-row: 2 / 3;
     }
   }
+
+  //&--closed {
+  //  @media (max-width: $narrow-width-only) {
+  //    display: none;
+  //  }
+  //}
 }
 
 .page-header__paint {

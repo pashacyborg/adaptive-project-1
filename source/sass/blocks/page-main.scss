@@ -7,10 +7,11 @@
   background-color: $background-color-header-index;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center -18px;
 
   @media (min-width: $medium-width) {
     min-height: 561px;
+    padding-bottom: 15px;
   }
 }
 
@@ -26,7 +27,7 @@
   @media (min-width: $medium-width) {
     font-size: 43px;
     line-height: 50px;
-    padding-top: 100px;
+    padding-top: 105px;
   }
 
   @media (min-width: $wide-width) {

@@ -1,5 +1,6 @@
 //Смотри "куски кода"
 .contacts {
+  margin-top: 89px;
 
   @media (min-width: $wide-width) {
     display: grid;
@@ -48,6 +49,7 @@
 .contacts__table {
   margin: 0;
   padding: 0;
+  padding-top: 26px;
   font-size: 14px;
 
   @media (min-width: $medium-width) {
@@ -89,11 +91,16 @@
   padding: 0;
 
   &--key {
+    width: 73px;
     vertical-align: top;
   }
 
   &--value {
-    padding-left: 32px;
+
+  }
+
+  &--second-pair {
+    padding-top: 28px;
   }
 }
 
@@ -107,6 +114,7 @@
 }
 
 .contacts__map-wrapper {
+  margin-top: 62px;
   background-color: red;
 
   @media (min-width: $wide-width) {
@@ -123,6 +131,9 @@
 }
 
 .contacts__to-contact {
+  margin: 0;
+  padding-top: 40px;
+
   @media (min-width: $wide-width) {
     grid-column: 2 / 3;
     margin: 0;

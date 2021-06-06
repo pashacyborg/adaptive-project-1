@@ -1,0 +1,43 @@
+.slider {
+  position: relative;
+  display: flex;
+  width: 260px;
+  border: 1px solid $frame-color;
+  margin-top: 30px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    width: 1px;
+    height: 50px;
+    background-color: $frame-color;
+  }
+}
+
+.slider__toggle {
+  width: 129px;
+  min-height: 50px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.slider__icon {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--left {
+    margin-right: 5px;
+  }
+
+  &--right {
+    margin-right: 4px;
+  }
+}

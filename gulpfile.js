@@ -30,7 +30,8 @@ const server = (done) => {
     server: {
       baseDir: 'source'
     },
-    cors: true,
+    // port: 9080,
+    cors: false,
     notify: false,
     ui: false,
   });

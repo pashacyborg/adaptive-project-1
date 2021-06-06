@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: 334px 334px;
     justify-content: center;
+    background-color: $background-color-header-index;
   }
 
   @media (min-width: $wide-width) {
@@ -11,10 +12,6 @@
 }
 
 .our-assortment__item {
-  // display: grid;
-  // grid-template-columns: 260px;
-  // justify-content: center;
-
   &--interior {
     background-color: $secondary-color;
 
@@ -38,14 +35,25 @@
 }
 
 .our-assortment__link {
-  // position: relative;
-  // display: block;
   display: grid;
   grid-template-columns: 1fr 180px 80px 1fr;
   min-height: 103px;
-  // padding: 25px 112px 25px 0px;
+  padding-top: 20px;
+
+  @media (min-width: $medium-width) {
+    display: flex;
+    width: 334px;
+    min-height: 119px;
+    padding-left: 45px;
+  }
+
+  @media (min-width: $wide-width) {
+    width: 525px;
+  }
 
   &--interior {
+    padding-top: 23px;
+
     &::before {
       grid-column: 3 / 4;
       grid-row: 1 / 2;
@@ -55,7 +63,6 @@
       content: "";
       width: 40px;
       height: 62px;
-      margin-top: 23px;
       margin-left: 34px;
       background-image: url(../img/our-assortment__interior-img.svg);
       opacity: 0.5;
@@ -72,6 +79,8 @@
   }
 
   &--toys {
+    padding-top: 21px;
+
     &::before {
       grid-column: 3 / 4;
       grid-row: 1 / 2;
@@ -81,7 +90,6 @@
       content: "";
       width: 60px;
       height: 60px;
-      margin-top: 21px;
       margin-left: 23px;
       background-image: url(../img/our-assortment__toys-img.svg);
       opacity: 0.5;
@@ -96,24 +104,9 @@
       }
     }
   }
-
-  @media (min-width: $medium-width) {
-    display: flex;
-    width: 334px;
-    padding-left: 45px;
-  }
-
-  @media (min-width: $wide-width) {
-    width: 525px;
-  }
 }
 
 .our-assortment__title {
-  @media (max-width: $narrow-width-only) {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-  }
-
   padding: 0;
   margin: 0;
   font-size: 19px;
@@ -121,8 +114,21 @@
   font-weight: 700;
   color: $main-background-color;
 
+  @media (max-width: $narrow-width-only) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
   @media (min-width: $medium-width) {
     font-size: 20px;
     line-height: 30px;
+  }
+
+  &--interior {
+    padding-top: 1px;
+  }
+
+  &--toys {
+    padding-top: 3px
   }
 }
