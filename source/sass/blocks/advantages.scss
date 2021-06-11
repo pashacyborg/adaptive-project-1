@@ -8,10 +8,12 @@
 
   @media (min-width: $medium-width) {
     grid-template-columns: 668px;
+    margin-top: 125px;
   }
 
   @media (min-width: $wide-width) {
     grid-template-columns: repeat(6, 175px);
+    margin-top: 165px;
   }
 }
 
@@ -23,6 +25,7 @@
   @media (min-width: $medium-width) {
     font-size: 43px;
     line-height: 50px;
+    padding-bottom: 43px;
   }
 
   @media (min-width: $wide-width) {
@@ -56,14 +59,15 @@
 }
 
 .advantages__item {
-  display: block;
   position: relative;
+  display: block;
   margin-top: 33px;
   padding-top: 50px;
 
   @media (min-width: $medium-width) {
     margin: 0;
-    padding-top: 80px;
+    padding-top: 55px;
+    margin-bottom: 55px;
   }
 
   &--materials {
@@ -76,6 +80,10 @@
       height: 38px;
       background-image: url(../img/icon-adv-flower.svg);
       background-repeat: no-repeat;
+
+      @media (min-width: $medium-width) {
+        top: -2px;
+      }
     }
   }
 
@@ -89,6 +97,11 @@
       height: 27px;
       background-image: url(../img/icon-adv-money.svg);
       background-repeat: no-repeat;
+
+      @media (min-width: $medium-width) {
+        top: 1px;
+        left: 1px;
+      }
     }
   }
 
@@ -102,6 +115,11 @@
       height: 27px;
       background-image: url(../img/icon-adv-likes.svg);
       background-repeat: no-repeat;
+
+      @media (min-width: $medium-width) {
+        top: 7px;
+        left: 8px;
+      }
     }
   }
 
@@ -115,6 +133,10 @@
       height: 34px;
       background-image: url(../img/icon-adv-clew.svg);
       background-repeat: no-repeat;
+
+      @media (min-width: $medium-width) {
+        top: 2px;
+      }
     }
   }
 
@@ -128,6 +150,10 @@
       height: 23px;
       background-image: url(../img/icon-adv-rocket.svg);
       background-repeat: no-repeat;
+
+      @media (min-width: $medium-width) {
+        top: 4px;
+      }
     }
   }
 
@@ -141,6 +167,10 @@
       height: 32px;
       background-image: url(../img/icon-adv-present.svg);
       background-repeat: no-repeat;
+
+      @media (min-width: $medium-width) {
+        top: 3px;
+      }
     }
   }
 }

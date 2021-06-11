@@ -5,6 +5,19 @@
   border: 1px solid $frame-color;
   margin-top: 30px;
 
+  @media (min-width: $medium-width) {
+    position: absolute;
+    right: 50px;
+    bottom: 51px;
+    width: auto;
+    border: none;
+  }
+
+  @media (min-width: $wide-width) {
+    right: 0px;
+    bottom: 95px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -13,6 +26,10 @@
     width: 1px;
     height: 50px;
     background-color: $frame-color;
+
+    @media (min-width: $medium-width) {
+      display: none;
+    }
   }
 }
 
@@ -22,16 +39,25 @@
   padding: 0;
   border: none;
   background-color: transparent;
+
+  @media(min-width: $medium-width) {
+    width: 85px;
+
+    &:hover {
+      svg {
+        opacity: 0.6;
+      }
+    }
+
+    &:active {
+      svg {
+        opacity: 0.3;
+      }
+    }
+  }
 }
 
 .slider__icon {
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
 
   &--left {
     margin-right: 5px;

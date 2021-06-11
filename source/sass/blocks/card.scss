@@ -39,6 +39,8 @@
 
 .card__info {
   border: 1px solid $frame-color;
+  padding-left: 28px;
+  padding-right: 27px;
 
   @media (min-width: $medium-width) and (max-width: $medium-width-limit) {
     grid-column: 3 / 5;
@@ -47,10 +49,12 @@
 
 .card__title {
   margin: 0;
+  margin-top:27px;
 }
 
 
 .card__title-link {
+  display: block;
   font-size: 17px;
   line-height: 24px;
   font-weight: 700;
@@ -62,12 +66,17 @@
 }
 
 .card__specifications {
+  margin: 0;
   font-size: 13px;
   line-height: 30px;
 
   @media (min-width: $medium-width) {
     font-size: 15px;
   }
+}
+
+.card__to-order {
+  margin: 0;
 }
 
 .card__price {
