@@ -28,9 +28,11 @@ exports.styles = styles;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'source',
+      // browser: ["google chrome"]
     },
-    cors: true,
+    // port: 9080,
+    cors: false,
     notify: false,
     ui: false,
   });

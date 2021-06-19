@@ -1,55 +1,51 @@
 .catalog-article {
-  //Тестировать display: contents для карточки товара
   display: grid;
   grid-template-columns: 260px;
   justify-content: center;
-  padding-top: 30px;
+  margin-top: 30px;
 
   @media (min-width: $medium-width) {
-    grid-template-columns: repeat(4, 167px);
-    padding-top: 53px;
+    grid-template-columns: 668px;
+    margin-top: 53px;
   }
 
   @media (min-width: $wide-width) {
     grid-template-columns: 1050px;
-    padding-top: 57px;
+    margin-top: 57px;
   }
 }
 
 .catalog-article__wrapper {
-  grid-column: 1 / -1;
-  grid-row: 1 / -1;
   display: grid;
-  // grid-template-rows: 96px 150px 131px 126px;
-  grid-template-rows: minmax(96px, auto)
-                      minmax(150px, auto)
-                      minmax(150px, auto)
-                      minmax(107px, auto);
-  border: 1px solid $frame-color;
+
+  &:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  }
 
   @media (min-width: $medium-width) {
-    grid-template-rows: minmax(455px, auto)
-                        minmax(288px, auto);
-    border: none;
+    grid-template-columns: repeat(4, 167px);
   }
 
   @media (min-width: $wide-width) {
-    grid-template-columns: minmax(682px, auto) minmax(368px, auto);
-    grid-template-rows: auto;
+    grid-template-columns: 1fr 367px;
+    grid-template-rows: min-content min-content min-content;
   }
 }
 
 .catalog-article__image-wrapper {
   margin: 0;
 
-  @media (max-width: $narrow-width-only) {
+  @media (min-width: $medium-width) {
     grid-column: 1 / -1;
-    grid-row: 2 / 3;
-    //Почему эти свойства не наследуются наверх(на wide-width?)
   }
 
-  @media (min-width: $medium-width) {
-    grid-row: 1 / 2;
+  @media (min-width: $wide-width) {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
   }
 }
 
@@ -67,69 +63,92 @@
   }
 }
 
-.catalog-article__info {
-  border: 1px solid $frame-color;
-
-  @media (max-width: $narrow-width-only) {
-    display: contents;
-  }
-
-  @media (min-width: $medium-width) {
-    padding: 40px;
-  }
-
-  @media (min-width: $medium-width) and (max-width: $wide-width) {
-    border-top: none;
-  }
-
-  @media (min-width: $wide-width) {
-    // padding: 96px 10px 0px 79px;
-    border-left: none;
-  }
-}
-
-//Этот элемент при переполнении ведет себя плохо. Че делать?
 .catalog-article__title {
-  @media (max-width: $narrow-width-only) {
-    grid-row: 1 / 2;
-  }
-
+  grid-row: 1 / 2;
+  position: relative;
+  padding-top: 22px;
+  padding-bottom: 25px;
+  padding-left: 90px;
+  margin: 0;
   font-size: 17px;
   font-weight: 700;
   line-height: 24px;
   color: $main-color;
-  margin: 0;
+  border: 1px solid $frame-color;
+  border-bottom: none;
 
   @media (min-width: $medium-width) {
+    grid-column: 1 / -1;
+    padding: 41px 107px 24px 107px;
+    grid-row: auto;
     font-size: 20px;
+  }
+
+  @media (min-width: $wide-width) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    padding: 96px 57px 27px 78px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 34px;
+    left: 33px;
+    content: "";
+    width: 32px;
+    height: 22px;
+    background-image: url(../img/camera.svg);
+    background-repeat: no-repeat;
+
+    @media (min-width: $medium-width) {
+      top: 38px;
+      left: 41px;
+    }
+
+    @media (min-width: $wide-width) {
+      top: 46px;
+      left: 78px;
+    }
   }
 }
 
 .catalog-article__description {
+  padding: 35px 25px 41px 33px;
   margin: 0;
   font-size: 13px;
   line-height: 24px;
-
-  @media (max-width: $narrow-width-only) {
-    grid-row: 3 / 4;
-    padding: 35px 30px 0px 34px;
-  }
+  border-left: 1px solid $frame-color;
+  border-right: 1px solid $frame-color;
 
   @media (min-width: $medium-width) {
+    grid-column: 1 / -1;
+    padding: 0px 40px 40px 40px;
     font-size: 15px;
     line-height: 30px;
+  }
+
+  @media (min-width: $wide-width) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    padding: 0px 57px 51px 78px;
   }
 }
 
 .catalog-article__to-order {
-  @media (max-width: $narrow-width-only) {
-    grid-row: 4 / 5;
-    align-self: center;
-    margin: 0 auto;
+  padding: 0 34px 33px 33px;
+  margin: 0;
+  border: 1px solid $frame-color;
+  border-top: none;
+
+  @media (min-width: $medium-width) {
+    grid-column: 1 / -1;
+    padding: 0px 42px 46px 42px;
   }
 
   @media (min-width: $wide-width) {
-    width: 230px;
-    margin: 0 auto;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    width: auto;
+    padding: 0px 57px 60px 79px;
   }
 }

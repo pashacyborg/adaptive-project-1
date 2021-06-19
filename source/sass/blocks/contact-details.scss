@@ -5,10 +5,57 @@
 
   @media (min-width: $medium-width) {
     grid-template-columns: repeat(4, 167px);
+    background-color: $main-background-color-medium;
+    padding-top: 44px;
+    padding-bottom: 50px;
   }
 
   @media (min-width: $wide-width) {
     grid-template-columns: repeat(6, 175px);
+  }
+}
+
+.contact-details__item {
+  position: relative;
+
+  &--email {
+    margin-top: 34px;
+  }
+
+  @media (max-width: $narrow-width-only) {
+    &::after {
+      position: absolute;
+      top: 8px;
+      right: 0;
+      content: "";
+      height: 1px;
+      background-color: $secondary-color-lightest-type1;
+    }
+
+    &--phone::after {
+      width: 200px;
+    }
+
+    &--email::after {
+      width: 182px;
+    }
+  }
+
+  input::placeholder {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $medium-width) {
+    grid-column: 1 / -1;
+    display: flex;
+
+    &--email {
+      margin-top: 19px;
+    }
+  }
+
+  @media (min-width: $wide-width) {
+    grid-column: 1 / -2;
   }
 }
 
@@ -18,21 +65,173 @@
   color: $secondary-color;
   text-transform: uppercase;
 
+  //@media (max-width: $narrow-width-only) {
+  //  &--phone {
+  //    &::after {
+  //      position: absolute;
+  //      top: 8px;
+  //      right: 0;
+  //      content: "";
+  //      width: 200px;
+  //      height: 1px;
+  //      background-color: $secondary-color-lightest-type1;
+  //    }
+  //  }
+  //
+  //  &--email {
+  //    &::after {
+  //      position: absolute;
+  //      top: 10px;
+  //      right: 0;
+  //      content: "";
+  //      width: 182px;
+  //      height: 1px;
+  //      background-color: $secondary-color-lightest-type1;
+  //    }
+  //  }
+  //}
+
   @media (min-width: $medium-width) {
     grid-column: 1 / 2;
+    box-sizing: content-box;
+    min-width: 88px;
+    padding-right: 79px;
+
+    &--phone {
+      padding-top: 21px;
+    }
+
+    &--email {
+      padding-top: 23px;
+    }
   }
 
   @media (min-width: $wide-width) {
-    padding-left: 60px;
+    padding-left: 62px;
+    padding-right: 26px;
+
+    &--phone {
+      padding-top: 21px;
+      padding-left: 61px;
+    }
+
+    &--email {
+      padding-right: 25px;
+    }
   }
 }
 
 .contact-details__input {
+  width: 100%;
+  padding: 18px 40px 17px 0;
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 18px;
+  color: $main-color;
+  border: none;
+  border-bottom: 2px solid $main-color;
+  outline: none;
+
+  &--phone {
+    &:focus,
+    &:hover {
+      border-color: $secondary-color-lightest-type1;
+
+      & + .contact-details__icon g {
+        opacity: 1;
+      }
+
+      & + .contact-details__icon path {
+        fill: $secondary-color-lightest-type1;
+      }
+    }
+
+    &:active {
+      border-color: $secondary-color-lightest-type1;
+
+      & + .contact-details__icon g {
+        opacity: 1;
+      }
+
+      & + .contact-details__icon path {
+        fill: $secondary-color-lightest-type1;
+      }
+    }
+  }
+
+  &--email {
+    &:focus,
+    &:hover {
+      border-color: $secondary-color-lightest-type1;
+
+      & + .contact-details__icon path {
+        fill: $secondary-color-lightest-type1;
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      border-color: $secondary-color-lightest-type1;
+
+      & + .contact-details__icon path {
+        fill: $secondary-color-lightest-type1;
+        opacity: 1;
+      }
+    }
+  }
+
+
   @media (min-width: $medium-width) {
-    grid-column: 2 / -1;
+    //grid-column: 2 / -1;
+    flex-grow: 1;
+    padding: 15px 75px 14px 17px;
+    font-size: 19px;
+    background-color: transparent;
+
+    &--email {
+      padding-left: 18px;
+    }
   }
 
   @media (min-width: $wide-width) {
     grid-column: 2 / -2;
+  }
+}
+
+.contact-details__icon {
+  position: absolute;
+
+  &--phone {
+    right: 7px;
+    bottom: 17px;
+  }
+
+  &--email {
+    right: 3px;
+    bottom: 15px;
+  }
+
+  @media (min-width: $medium-width) {
+    &--phone {
+      right: 26px;
+    }
+
+    &--email {
+      right: 22px;
+    }
+  }
+
+  @media (min-width: $wide-width) {
+    right: 6px;
+
+    &--phone {
+      right: 8px;
+    }
+
+    &--email {
+      right: 4px;
+    }
   }
 }

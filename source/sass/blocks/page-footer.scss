@@ -1,21 +1,32 @@
 .page-footer {
   display: grid;
   grid-template-columns: 260px;
-  grid-template-rows: minmax(80px, auto)
-                      minmax(80px, auto);
+  //grid-template-rows: minmax(80px, auto)
+  //                    minmax(80px, auto);
   justify-content: center;
+  margin-top: 55px;
   font-size: 19px;
   font-weight: 700;
   line-height: 18px;
   background-color: $main-background-color-medium;
 
   @media (min-width: $medium-width) {
-    grid-template-columns: repeat(4, 167px);
+    grid-template-columns: 668px;
     grid-template-rows: minmax(143px, auto);
+    margin-top: 50px;
   }
 
   @media (min-width: $wide-width) {
-    grid-template-columns: repeat(6, 175px);
-    grid-template-rows: minmax(143px, auto);
+    grid-template-columns: 1050px;
+  }
+}
+
+.page-footer__wrapper {
+  display: grid;
+  grid-template-rows: minmax(80px, auto)
+                      minmax(80px, auto);
+
+  @media (min-width: $medium-width) {
+    display: flex;
   }
 }

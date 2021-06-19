@@ -9,12 +9,17 @@
   }
 
   &--general {
+    //@media (min-width: $wide-width) {
+    //  display: grid;
+    //  grid-template-columns: 1fr 1fr;
+    //}
 
     .main-nav__item {
-      box-shadow: 0px 1px 0px #ECECEC,
-                  inset 0px 1px 0px #ECECEC;
+      box-shadow: 0px 1px 0px $frame-color,
+                  inset 0px 1px 0px $frame-color;
 
       @media (min-width: $medium-width) {
+        max-width: 150px;
         height: auto;
         box-shadow: none;
         padding-top: 20px;
@@ -22,19 +27,22 @@
       }
 
       @media (min-width: $wide-width) {
+        max-width: 210px;
         padding: 0;
         margin: 0;
       }
 
       &--catalog {
         @media (min-width: $medium-width) {
-          margin-right: 38px;
+          margin-right: 37px;
         }
 
         @media (min-width: $wide-width) {
           margin: 0;
+          padding-left: 0;
           border-right: 1px solid $frame-color;
         }
+
       }
 
       &--knitting-to-order {
@@ -48,12 +56,17 @@
       display: flex;
       align-items: center;
       min-height: 79px;
-      padding: 8px 30px;
+      // padding: 8px 30px;
       font-weight: bold;
       font-size: 17px;
       line-height: 24px;
       color: $main-color;
       text-decoration: none;
+
+      @media (max-width: $narrow-width-only) {
+        display: grid;
+        grid-template-columns: 1fr 46px 214px 1fr;
+      }
 
       @media (min-width: $medium-width) {
         width: auto;
@@ -65,7 +78,21 @@
       @media (min-width: $wide-width) {
         min-height: 88px;
         padding-right: 20px;
+        font-size: 17px;
       }
+
+      &:hover {
+        span {
+          opacity: 0.6;
+        }
+      }
+
+      &:active {
+        span {
+          opacity: 0.3;
+        }
+      }
+
 
       &--catalog {
         @media (min-width: $wide-width) {
@@ -83,10 +110,11 @@
 
     .main-nav__wrapper {
       @media (max-width: $narrow-width-only) {
-        display: block;
-        width: 260px;
-        margin: 0 auto;
-        padding-left: 46px;
+        grid-column: 3 / 4;
+        // display: block;
+        // width: 260px;
+        // margin: 0 auto;
+        // padding-left: 46px;
       }
     }
   }
@@ -95,13 +123,18 @@
 
     .main-nav__item {
       min-height: 79px;
-      box-shadow: 0px 1px 0px #ECECEC,
-                  inset 0px 1px 0px #ECECEC;
+      box-shadow: 0px 1px 0px $frame-color,
+                  inset 0px 1px 0px $frame-color;
+
+      @media (max-width: $narrow-width-only) {
+        &:last-child {
+          border-bottom: 1px solid $frame-color;
+        }
+      }
 
       @media (min-width: $medium-width) {
         min-height: auto;
         box-shadow: none;
-        outline: 2px dashed red;
       }
       //Прописать общее правило для элементов навигации, которые буду добавлять
       //С :not, в который не войдут первые два элемента навигации
@@ -112,28 +145,78 @@
         }
       }
 
+      &--site-search {
+        margin-left: auto;
+      }
+
       &--basket {
         @media (min-width: $medium-width) {
-          margin-left: auto;
+          // margin-left: auto;
         }
       }
     }
 
     .main-nav__link {
+      position: relative;
       display: flex;
       align-items: center;
       min-height: 79px;
-      padding: 8px 30px;
+      // padding: 8px 30px;
       font-weight: bold;
       font-size: 17px;
       line-height: 24px;
       color: $main-color;
       text-decoration: none;
 
+      @media (max-width: $narrow-width-only) {
+        display: grid;
+        grid-template-columns: 1fr 46px 214px 1fr;
+      }
+
       @media (min-width: $medium-width) {
         width: auto;
         min-height: 88px;
         padding: 0;
+      }
+
+      &:hover {
+        svg {
+          fill: $secondary-color;
+          opacity: 1;
+        }
+
+        span {
+          opacity: 0.6;
+        }
+      }
+
+      &:active {
+        svg {
+          fill: $secondary-color;
+          opacity: 0.3;
+        }
+
+        span {
+          opacity: 0.3;
+        }
+      }
+
+      &--site-search {
+        @media (min-width: $medium-width) {
+          width: 84px;
+          border-left: 1px solid $frame-color-two;
+          border-right: 1px solid $frame-color-two;
+
+          &:hover {
+            border-left: 1px solid $secondary-color-lightest-type1;
+            border-right: 1px solid $secondary-color-lightest-type1;
+          }
+
+          &:active {
+            border-left: 1px solid $frame-color-three;
+            border-right: 1px solid $frame-color-three;
+          }
+        }
       }
 
       &--basket {
@@ -144,17 +227,55 @@
 
         @media (min-width: $wide-width) {
           width: 266px;
-          padding-left: 84px;
+          padding-left: 83px;
         }
+      }
+    }
+
+    .main-nav__icon {
+      opacity: 0.2;
+
+      @media (max-width: $narrow-width-only) {
+        grid-column: 2 / 3;
+      }
+
+      @media (min-width: $medium-width) {
+        position: absolute;
+      }
+
+      &--site-search {
+        width: 17.6px;
+        height: 17.6px;
+
+        @media (max-width: $narrow-width-only) {
+          display: block;
+          margin-left: 2px;
+        }
+
+        @media (min-width: $medium-width) {
+          left: 33px;
+        }
+
+
+      }
+
+      &--basket {
+        @media (min-width: $medium-width) {
+          left: 31px;
+        }
+
+        width: 20.3px;
+        height: 18.8px;
       }
     }
 
     .main-nav__wrapper {
       @media (max-width: $narrow-width-only) {
-        display: block;
-        width: 260px;
-        margin: 0 auto;
-        padding-left: 46px;
+        grid-column: 3 / 4;
+        // display: block;
+        // width: 260px;
+        // margin: 0 auto;
+        // padding-left: 46px;
       }
 
       &--site-search {
@@ -171,17 +292,14 @@
     @media (min-width: $medium-width) {
       display: flex;
       justify-content: flex-end;
+      flex-wrap: wrap;
     }
 
     .main-nav__item {
-
       @media (min-width: $medium-width) {
+        max-width: 235px;
         padding-top: 20px;
         margin-right: 10px;
-      }
-
-      @media (min-width: $wide-width) {
-
       }
 
       &--hidden {
@@ -191,13 +309,17 @@
       }
 
       &--new-arrivals {
-        margin-right: 45px;
+        margin-right: 62px;
       }
 
       &--delivery {
         @media (min-width: $medium-width) {
           margin-left: auto;
           margin-right: 0;
+        }
+
+        @media (min-width: $wide-width) {
+          margin-right: 1px;
         }
       }
     }
@@ -212,9 +334,38 @@
       @media (min-width: $medium-width) {
         font-size: 15px;
       }
-      // &--delivery {
-      //   font-weight: 400;
-      // }
+
+      @media (min-width: $wide-width) {
+        //font-size: 17px;
+      }
+
+      &:hover {
+        span {
+          opacity: 0.6;
+        }
+      }
+
+      &:active {
+        span {
+          opacity: 0.3;
+        }
+      }
+
+      &--delivery {
+        font-weight: 400;
+
+        @media (min-width: $wide-width) {
+          font-size: 15px;
+        }
+
+        &:hover,
+        &:active {
+          span {
+            opacity: 1;
+            text-decoration: underline;
+          }
+        }
+      }
     }
   }
 }

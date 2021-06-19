@@ -1,12 +1,13 @@
 //Смотри "куски кода"
 .contacts {
+  margin-top: 89px;
 
   @media (min-width: $wide-width) {
     display: grid;
     grid-template-columns: repeat(6, 175px);
-    grid-template-rows: minmax(405px, auto)
-                        minmax(52px, auto);
+    grid-template-rows: 1fr min-content;
     justify-content: center;
+    margin-top: 164px;
   }
 }
 
@@ -17,16 +18,19 @@
 
   @media (min-width: $medium-width) {
     grid-template-columns: 668px;
+    padding-top: 64px;
   }
 
   @media (min-width: $wide-width) {
     grid-column: 2 / 4;
     grid-row: 1 / 2;
     display: block;
+    padding-top: 79px;
   }
 }
 
 .contacts__title {
+  position: relative;
   margin: 0;
   font-size: 18px;
   line-height: 30px;
@@ -34,7 +38,6 @@
   color: $main-color;
 
   @media (min-width: $medium-width) {
-
     font-size: 43px;
     line-height: 50px;
   }
@@ -43,21 +46,42 @@
     font-size: 53px;
     line-height: 57px;
   }
+
+  &::after {
+    @media (min-width: $medium-width) {
+      content: "";
+      position: absolute;
+      bottom: -9px;
+      right: 3px;
+      width: 47px;
+      height: 81px;
+      background-image: url(../img/flag-contacts.svg);
+      background-repeat: no-repeat;
+      //background-size: contain;
+    }
+
+    @media (min-width: $wide-width) {
+      left: -112px;
+      bottom: -7px;
+    }
+  }
 }
 
 .contacts__table {
   margin: 0;
   padding: 0;
+  padding-top: 26px;
   font-size: 14px;
 
   @media (min-width: $medium-width) {
     grid-column: 1 / -1;
     display: grid;
+    padding-top: 48px;
     font-size: 17px;
   }//Не применяется к wide width почему то
 
   @media (min-width: $wide-width) {
-
+    padding-top: 33px;
   }
 }
 
@@ -89,17 +113,40 @@
   padding: 0;
 
   &--key {
+    width: 74px;
     vertical-align: top;
   }
 
   &--value {
-    padding-left: 32px;
+
+  }
+
+  &--second-pair {
+    padding-top: 28px;
+
+    @media (min-width: $medium-width) {
+      padding-top: 0;
+    }
+
+    @media (min-width: $wide-width) {
+      padding-top: 28px;
+    }
   }
 }
 
 .contacts__email {
   color: $main-color-lightest;
   border-bottom: 1px solid $secondary-color-lightest-type1;
+
+  &:hover {
+    color: $secondary-color-medium--hover;
+    border-color: $secondary-color-medium--hover;
+  }
+
+  &:active {
+    color: $secondary-color-medium--hover;
+    border: none;
+  }
 }
 
 .contacts__address {
@@ -107,13 +154,19 @@
 }
 
 .contacts__map-wrapper {
+  margin-top: 62px;
   background-color: red;
+
+  @media(min-width: $medium-width) {
+    margin-top: 45px;
+  }
 
   @media (min-width: $wide-width) {
     grid-column: 4 / 7;
     grid-row: 1 / -1;
     width: 525px;
-    min-height: 457px;
+    height: 457px;
+    margin: 0;
   }
 }
 
@@ -123,6 +176,13 @@
 }
 
 .contacts__to-contact {
+  margin: 0;
+  padding-top: 40px;
+
+  @media(min-width: $medium-width) {
+    padding-top: 59px;
+  }
+
   @media (min-width: $wide-width) {
     grid-column: 2 / 3;
     margin: 0;
@@ -130,7 +190,7 @@
 }
 
 .contacts__contact-button {
-  @media (max-width: $wide-width) {
+  @media (max-width: $medium-width-limit) {
     margin: 0 auto;
   }
 }

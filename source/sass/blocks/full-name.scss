@@ -5,6 +5,7 @@
 
   @media (min-width: $medium-width) {
     grid-template-columns: repeat(4, 167px);
+    padding-top: 50px;
   }
 
   @media (min-width: $wide-width) {
@@ -13,42 +14,134 @@
 }
 
 .full-name__title {
+  margin: 0;
+  margin-bottom: 28px;
   font-size: 17px;
   line-height: 16px;
   font-weight: 700;
   color: $secondary-color;
   text-transform: uppercase;
 
+  @media (max-width: $narrow-width-only) {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 7px;
+      right: 0;
+      content: "";
+      width: 200px;
+      height: 1px;
+      background-color: $secondary-color-lightest-type1;
+    }
+  }
+
   @media (min-width: $medium-width) {
     grid-column: 1 / 2;
+    padding-top: 21px;
+    margin-bottom: 0;
   }
 
   @media (min-width: $wide-width) {
-    padding-left: 60px;
+    padding-top: 21px;
+    padding-left: 61px;
   }
-}
-
-
-.full-name__label {
-  font-size: 17px;
-  font-weight: 700;
 }
 
 .full-name__list {
   list-style: none;
   margin: 0;
   padding: 0;
+  padding-top: 1px;
+
+  input::placeholder {
+    opacity: 0.3;
+  }
 
   @media (min-width: $medium-width) {
     grid-column: 2 / -1;
+    font-size: 19px;
+    line-height: 18px;
   }
 
   @media (min-width: $wide-width) {
     grid-column: 2 / -2;
+    padding-left: 2px;
   }
 }
 
 .full-name__item {
   display: flex;
   flex-direction: column;
+  margin-top: 22px;
+
+  &--name {
+    margin: 0;
+  }
+
+  @media (min-width: $medium-width) {
+    flex-direction: row;
+    align-items: baseline;
+  }
+}
+
+.full-name__label {
+  font-weight: 700;
+
+  @media (min-width: $medium-width) {
+    padding-right: 25px;
+
+    &--name {
+      padding-right: 24px;
+    }
+
+    &--patronymic {
+      padding-right: 27px;
+    }
+  }
+}
+
+.full-name__input {
+  padding: 17px 40px 14px 0;
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 18px;
+  color: $main-color;
+  border: none;
+  border-bottom: 2px solid $main-color;
+  outline: none;
+
+  &:focus,
+  &:hover {
+    border-color: $secondary-color-lightest-type1;
+  }
+
+  &:active {
+    border-color: $secondary-color-lightest-type1;
+  }
+
+  @media (min-width: $medium-width) {
+    flex-grow: 1;
+    padding: 14px 76px 12px 18px;
+    font-size: 19px;
+    line-height: 18px;
+
+    &--name {
+
+    }
+
+    &--surname {
+      padding-left: 16px;
+    }
+
+    &--patronymic {
+      padding-left: 17px;
+    }
+  }
+
+  @media (min-width: $wide-width) {
+    padding-right: 33px;
+  }
 }

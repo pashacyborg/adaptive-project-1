@@ -1,3 +1,23 @@
 .personal-data {
+  margin-top: 21px;
 
+  @media (min-width: $medium-width) {
+    margin-top: 0;
+  }
+}
+
+.personal-data__group-2 {
+  margin-top: 35px;
+
+  @media (min-width: $medium-width) {
+    margin-top: 50px;
+  }
+}
+
+.personal-data__group-3 {
+  margin-top: 35px;
+
+  @media (min-width: $medium-width) {
+    margin-top: 28px;
+  }
 }

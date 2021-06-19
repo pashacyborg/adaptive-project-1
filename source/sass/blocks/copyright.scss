@@ -1,28 +1,45 @@
 .copyright {
-  display: grid;
-  align-items: center;
+  display: flex;
   justify-content: center;
+  align-items: center;
 
   @media (min-width: $medium-width) {
-    justify-content: end;
+
   }
 
   @media (min-width: $wide-width) {
-    grid-column: 5 / 7;
-    justify-content: end;
+
   }
 }
 
 .copyright__link {
-  display: grid;
-  grid-auto-flow: column;
-  justify-content: space-between;
-  width: 180px;
+  display: flex;
+  width: 182px;
+
+  &:hover {
+    svg {
+      fill: $secondary-color-medium--hover;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: $secondary-color-medium--hover;
+      opacity: 0.3;
+    }
+  }
 }
 
 .copyright__label {
+  width: 140px;
+  padding-top: 7px;
   font-size: 19px;
   font-weight: 700;
   line-height: 18px;
   color: $main-color;
+}
+
+.copyright__icon {
+  margin-left: 15px;
+  fill: $secondary-color;
 }

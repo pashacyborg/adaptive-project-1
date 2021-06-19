@@ -2,7 +2,7 @@
   display: block;
   width: 260px;
   height: 52px;
-  padding: 15px 20px;
+  padding: 14px 20px;
   font-size: 17px;
   font-weight: 700;
   line-height: 20px;
@@ -12,19 +12,41 @@
   text-align: center;
   text-transform: uppercase;
 
+  &:hover {
+    color: $main-background-color;
+    background-color: $main-color-lightest;
+  }
+
+  &:active {
+    color: $main-background-color-03;
+    background-color: $main-color-lightest;
+  }
+
   &--to-order-index {
+    @media (max-width: $narrow-width) {
+      font-size: 18px;
+    }
+
     @media (min-width: $medium-width) {
       width: 292px;
     }
   }
 
   &--to-submit-index {
+    @media (max-width: $narrow-width-only) {
+      font-size: 18px;
+    }
+
     @media (min-width: $medium-width) {
       width: 175px;
     }
   }
 
   &--to-contact-index {
+    @media (max-width: $narrow-width) {
+      font-size: 18px;
+    }
+
     @media (min-width: $medium-width) {
       width: 230px;
     }
@@ -32,10 +54,14 @@
 
   &--to-order-catalog {
     width: 192px;
+    padding-top: 16px;
+    padding-bottom: 12px;
+    font-size: 18px;
     line-height: 16px;
 
     @media (min-width: $medium-width) {
       width: auto;
+      font-size: 17px;
     }
 
     @media (min-width: $wide-width) {
