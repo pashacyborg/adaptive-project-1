@@ -22,7 +22,7 @@
         max-width: 150px;
         height: auto;
         box-shadow: none;
-        padding-top: 21px;
+        padding-top: 20px;
         margin-right: 10px;
       }
 
@@ -34,8 +34,7 @@
 
       &--catalog {
         @media (min-width: $medium-width) {
-          margin-right: 36px;
-          padding-left: 3px;
+          margin-right: 37px;
         }
 
         @media (min-width: $wide-width) {
@@ -228,7 +227,7 @@
 
         @media (min-width: $wide-width) {
           width: 266px;
-          padding-left: 84px;
+          padding-left: 83px;
         }
       }
     }
@@ -310,7 +309,6 @@
       }
 
       &--new-arrivals {
-        padding-left: 2px;
         margin-right: 62px;
       }
 
@@ -318,6 +316,10 @@
         @media (min-width: $medium-width) {
           margin-left: auto;
           margin-right: 0;
+        }
+
+        @media (min-width: $wide-width) {
+          margin-right: 1px;
         }
       }
     }

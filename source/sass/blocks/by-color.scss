@@ -2,30 +2,50 @@
   display: grid;
   grid-template-columns: 260px;
   justify-content: center;
-  padding-top: 40px;
   font-weight: 700;
 
   @media (min-width: $medium-width) {
     grid-template-columns: repeat(4, 167px);
+    background-color: $main-background-color-medium;
+    padding-top: 35px;
+    padding-bottom: 35px;
   }
 
   @media (min-width: $wide-width) {
     grid-template-columns: repeat(6, 175px);
+    padding-top: 39px;
   }
 }
 
 .by-color__title {
+  margin: 0;
   font-size: 17px;
   line-height: 16px;
   color: $secondary-color;
   text-transform: uppercase;
 
+  @media (max-width: $narrow-width-only) {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 7px;
+      right: 0;
+      content: "";
+      width: 200px;
+      height: 1px;
+      background-color: $secondary-color-lightest-type1;
+    }
+  }
+
   @media (min-width: $medium-width) {
     grid-column: 1 / 2;
+    padding-top: 32px;
   }
 
   @media (min-width: $wide-width) {
-    padding-left: 60px;
+    padding-left: 61px;
+    padding-top: 28px;
   }
 }
 
@@ -33,23 +53,32 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  padding-top: 14px;
 
   @media (min-width: $medium-width) {
     grid-column: 2 / -1;
     display: flex;
+    justify-content: space-between;
+    width: 482px;
+    padding-top: 0;
     flex-wrap: wrap;
+    font-size: 19px;
+    line-height: 18px;
   }
 
   @media (min-width: $wide-width) {
     display: grid;
-    grid-template-columns: 262px 264px 1fr;
+    width: auto;
+    justify-content: normal;
+    grid-template-columns: 262px 264px 262px;
     grid-template-rows: auto auto;
-    grid-auto-flow: column;
   }
 }
 
 .by-color__item {
-  @media (min-width: $medium-width) and (max-width: $medium-width-limit) {
+  position: relative;
+
+  @media (min-width: $medium-width) {
     width: 220px;
 
     &--white {
@@ -74,6 +103,153 @@
 
     &--orange {
       order: 6;
+    }
+  }
+
+  @media (min-width: $wide-width) {
+    width: 262px;
+  }
+}
+
+.by-color__input {
+
+  &:checked+.by-color__label::after {
+    position: absolute;
+    top: 21px;
+    left: 7px;
+    content: "";
+    width: 24px;
+    height: 17px;
+    background-image: url(../img/check-mark-mobile.svg);
+    background-repeat: no-repeat;
+
+    @media (min-width: $medium-width) {
+      top: 26px;
+      left: 10px;
+      width: 32px;
+      height: 22px;
+      background-image: url(../img/check-mark-desktop.svg);
+    }
+
+    @media (min-width: $wide-width) {
+      top: 24px;
+      left: 10px;
+    }
+  }
+
+  & + .by-color__label:hover::before {
+    border-color: $secondary-color-lightest-type1;
+  }
+
+  & + .by-color__label:active::before {
+    border-color: $main-color;
+    opacity: 0.3;
+  }
+
+  @media (min-width: $medium-width) {
+    &--white {
+      &:checked+.by-color__label::after {
+        top: 31px;
+        left: 10px;
+      }
+    }
+
+    &--grey {
+      &:checked+.by-color__label::after {
+        top: 31px;
+        left: 10px;
+      }
+    }
+  }
+
+  @media (min-width: $wide-width) {
+    &--white {
+      &:checked+.by-color__label::after {
+        top: 24px;
+        left: 10px;
+      }
+    }
+
+    &--grey {
+      &:checked+.by-color__label::after {
+        top: 24px;
+        left: 10px;
+      }
+    }
+  }
+}
+
+.by-color__label {
+  display: block;
+  padding: 21px 0 22px 61px;
+
+  &::before {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    content: "";
+    width: 38px;
+    height: 38px;
+    border: 2px solid $main-color-lightest;
+  }
+
+  @media (min-width: $medium-width) {
+    padding: 30px 0 30px 82px;
+
+    &::before {
+      width: 52px;
+      height: 52px;
+    }
+
+    &--white {
+      padding-bottom: 31px;
+
+      &::before {
+        top: 15px;
+      }
+    }
+
+    &--grey {
+      padding-top: 32px;
+      padding-bottom: 31px;
+      padding-left: 81px;
+
+      &::before {
+        top: 15px;
+      }
+    }
+
+    &--tiffany {
+      padding-top: 28px;
+      padding-left: 81px;
+    }
+
+    &--black {
+      padding-top: 28px;
+      padding-left: 81px;
+    }
+
+    &--pink {
+      padding-top: 26px;
+    }
+
+    &--orange {
+      padding-top: 26px;
+      padding-left: 81px;
+    }
+  }
+
+  @media (min-width: $wide-width) {
+    padding: 28px 0 29px 82px;
+
+    &--white,
+    &--grey,
+    &--tiffany {
+      padding-bottom: 30px;
+    }
+
+    &::before {
+      top: 8px;
     }
   }
 }

@@ -15,13 +15,13 @@
   @media (min-width: $medium-width) {
     grid-template-columns: repeat(4, 167px);
     row-gap: 54px;
-    padding-top: 67px;
+    padding-top: 78px;
   }
 
   @media (min-width: $wide-width) {
     grid-template-columns: repeat(3, 316px);
     row-gap: 57px;
     column-gap: 51px;
-    padding-top: 111px;
+    padding-top: 123px;
   }
 }

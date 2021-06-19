@@ -19,6 +19,7 @@
 
   &:active {
     color: $main-background-color-03;
+    background-color: $main-color-lightest;
   }
 
   &--to-order-index {
@@ -53,10 +54,14 @@
 
   &--to-order-catalog {
     width: 192px;
+    padding-top: 16px;
+    padding-bottom: 12px;
+    font-size: 18px;
     line-height: 16px;
 
     @media (min-width: $medium-width) {
       width: auto;
+      font-size: 17px;
     }
 
     @media (min-width: $wide-width) {

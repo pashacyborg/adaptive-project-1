@@ -9,7 +9,7 @@
 
   @media (min-width: $medium-width) {
     display: grid;
-    grid-template-columns: 1fr 321px 349px 1fr;
+    grid-template-columns: 1fr 320px 348px 1fr;
     grid-template-rows: minmax(88px, auto)
                         minmax(50px, auto);
   }
@@ -74,7 +74,7 @@
   left: 50%;
   width: 20px;
   height: 20px;
-  margin-left: 117px;
+  margin-left: 110px;
   border: none;
   // outline: none;
   background-color: $main-background-color;
