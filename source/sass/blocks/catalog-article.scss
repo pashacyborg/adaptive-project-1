@@ -63,6 +63,20 @@
   }
 }
 
+.catalog-article__image {
+  display: block;
+  width: 100%;
+  min-height: 150px;
+
+  @media (min-width: $medium-width) {
+    min-height: 455px
+  }
+
+  @media (min-width: $wide-width) {
+
+  }
+}
+
 .catalog-article__title {
   grid-row: 1 / 2;
   position: relative;
@@ -97,7 +111,8 @@
     content: "";
     width: 32px;
     height: 22px;
-    background-image: url(../img/camera.svg);
+    background-image: url(../img/icon-camera.svg);
+    background-position: center;
     background-repeat: no-repeat;
 
     @media (min-width: $medium-width) {

@@ -40,20 +40,27 @@
   border: none;
   background-color: transparent;
 
+  &:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+
+    svg {
+      opacity: 0.6;
+    }
+
+    @media (min-width: $medium-width) {
+      box-shadow: none;
+      background-color: $main-background-color-medium;
+    }
+  }
+
+  &:active {
+    svg {
+      opacity: 0.3;
+    }
+  }
+
   @media(min-width: $medium-width) {
     width: 85px;
-
-    &:hover {
-      svg {
-        opacity: 0.6;
-      }
-    }
-
-    &:active {
-      svg {
-        opacity: 0.3;
-      }
-    }
   }
 }
 

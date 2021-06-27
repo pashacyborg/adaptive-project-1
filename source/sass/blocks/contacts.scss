@@ -153,26 +153,36 @@
   margin: 0;
 }
 
-.contacts__map-wrapper {
+.contacts__map {
+  min-height: 454px;
   margin-top: 62px;
-  background-color: red;
+  background-image: url("../img/map-mobile@1x.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 
-  @media(min-width: $medium-width) {
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/map-mobile@2x.jpg");
+  }
+
+  @media (min-width: $medium-width) {
     margin-top: 45px;
+    background-image: url("../img/map-tablet@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: $wide-width) {
     grid-column: 4 / 7;
     grid-row: 1 / -1;
-    width: 525px;
-    height: 457px;
     margin: 0;
-  }
-}
+    background-image: url("../img/map-desktop@1x.jpg");
 
-.contacts__map {
-  display: block;
-  margin: 0 auto;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-desktop@2x.jpg");
+    }
+  }
 }
 
 .contacts__to-contact {

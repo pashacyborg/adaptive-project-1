@@ -40,21 +40,16 @@
 
 .page-header__logo-link {
   display: block;
-  width: 85.6px;
-  height: 35px;
   margin: 0 auto;
   margin-top: 22px;
   //background: red;
 
   @media (min-width: $medium-width) {
-    width: 112.4px;
-    height: 46.1px;
     margin: 0;
   }
 
   @media (min-width: $wide-width) {
-    width: 148.1px;
-    height: 72.7px;
+
   }
 }
 
@@ -65,6 +60,21 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+.page-header__logo-image {
+  width: 86px;
+  height: 35px;
+
+  @media (min-width: $medium-width) {
+    width: 113px;
+    height: 46px;
+  }
+
+  @media (min-width: $wide-width) {
+    width: 149px;
+    height: 72px;
   }
 }
 

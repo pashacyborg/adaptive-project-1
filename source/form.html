@@ -10,7 +10,11 @@
     <header class="page-header">
       <p class="page-header__logo-wrapper">
         <a class="page-header__logo-link" href="index.html">
-          <img src="img/logo-mobile.svg" width="86px" height="35px" alt="Интернет-магазин «Мишка»">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин «Мишка»">
+          </picture>
         </a>
       </p>
      <button class="page-header__navigation-toggle page-header__navigation-toggle--closed page-header__navigation-toggle--opened" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -153,7 +157,7 @@
       <div class="page-footer__wrapper">
         <p class="page-footer__logo footer-logo">
           <a class="footer-logo__link" href="index.html">
-            <img class="footer-logo__image" src="https://via.placeholder.com/101x34" alt="Изображение вязанных корзинок">
+            <img class="footer-logo__image" src="img/logo-footer.svg" alt="Изображение логотипа «Мишка»">
           </a>
         </p>
         <ul class="social-list">
