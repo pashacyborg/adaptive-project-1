@@ -53,6 +53,19 @@
   }
 }
 
+.card__image {
+  width: 100%;
+  min-height: 195px;
+
+  @media (min-width: $medium-width) {
+    min-height: 334px;
+  }
+
+  @media (min-width: $wide-width) {
+    min-height: 462px;
+  }
+}
+
 .card__info {
   padding-left: 27px;
   padding-right: 26px;
