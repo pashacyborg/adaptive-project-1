@@ -31,8 +31,12 @@
 }
 
 .social-list__item {
+  svg {
+    fill: $main-color-medium
+  }
+
   &:hover {
-    path {
+    svg {
       fill: $secondary-color-medium--hover;
     }
 
@@ -59,11 +63,9 @@
 }
 
 .social-list__link {
-
-  &--facebook {
-  }
+  display: block;
 }
 
 .social-list__icon {
-
+  display: block;
 }
