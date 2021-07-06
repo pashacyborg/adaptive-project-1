@@ -3,6 +3,8 @@
   width: 260px;
   height: 52px;
   padding: 14px 20px;
+  font-family: $main-font;
+  font-style: normal;
   font-size: 17px;
   font-weight: 700;
   line-height: 20px;
@@ -70,6 +72,8 @@
   }
 
   &--to-submit-form {
+    padding-top: 18px;
+    padding-bottom: 18px;
     line-height: 16px;
 
     @media (min-width: $medium-width) {

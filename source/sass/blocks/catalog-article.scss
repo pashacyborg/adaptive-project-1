@@ -37,10 +37,12 @@
 }
 
 .catalog-article__image-wrapper {
+  width: 260px;
   margin: 0;
 
   @media (min-width: $medium-width) {
     grid-column: 1 / -1;
+    width: auto;
   }
 
   @media (min-width: $wide-width) {
@@ -52,7 +54,6 @@
 .catalog-article__image-link {
   display: block;
   min-height: 150px;
-  background: red;
 
   @media (min-width: $medium-width) {
     min-height: 455px;
@@ -69,7 +70,7 @@
   min-height: 150px;
 
   @media (min-width: $medium-width) {
-    min-height: 455px
+    min-height: 455px;
   }
 
   @media (min-width: $wide-width) {

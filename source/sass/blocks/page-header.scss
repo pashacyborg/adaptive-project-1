@@ -23,6 +23,8 @@
   display: flex;
   margin: 0;
   min-height: 79px;
+  justify-content: center;
+  align-items: center;
 
   @media (min-width: $medium-width) {
     grid-column: 2 / 3;
@@ -39,10 +41,7 @@
 }
 
 .page-header__logo-link {
-  display: block;
-  margin: 0 auto;
-  margin-top: 22px;
-  //background: red;
+  display: flex;
 
   @media (min-width: $medium-width) {
     margin: 0;
@@ -51,6 +50,12 @@
   @media (min-width: $wide-width) {
 
   }
+}
+
+.page-header__logo-link picture {
+  display: flex;
+  width: auto;
+  height: auto;
 }
 
 .page-header__logo-link img {

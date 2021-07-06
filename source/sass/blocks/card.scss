@@ -41,7 +41,6 @@
 .card__image-link {
   display: block;
   height: 195px;
-  background: red;
 
   @media (min-width: $medium-width) {
     height: 334px;
@@ -99,14 +98,15 @@
   margin-top: 25px;
 
   &--bunny-jumper {
+    margin-top: 28px;
   }
 
   &--laundry-basket {
-    margin-top: 26px;
+    margin-top: 29px;
   }
 
   &--basket-for-toys {
-    margin-top: 24px;
+    margin-top: 25px;
   }
 
   @media (min-width: $medium-width) {
@@ -186,19 +186,20 @@
   justify-content: space-between;
   margin: 0;
   margin-top: 17px;
+  margin-bottom: 12px;
   border-top: 1px solid $frame-color;
 
-  &--bunny-jumper {
-    margin-bottom: 14px;
-  }
-
-  &--laundry-basket {
-    margin-bottom: 13px;
-  }
-
-  &--basket-for-toys {
-    margin-bottom: 11px;
-  }
+  //&--bunny-jumper {
+  //  margin-bottom: 12px;
+  //}
+  //
+  //&--laundry-basket {
+  //  margin-bottom: 13px;
+  //}
+  //
+  //&--basket-for-toys {
+  //  margin-bottom: 11px;
+  //}
 
   @media (min-width: $medium-width) {
     min-height: 53px;

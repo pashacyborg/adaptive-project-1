@@ -8,7 +8,7 @@
     grid-template-columns: repeat(4, 167px);
     background-color: $main-background-color-medium;
     padding-top: 35px;
-    padding-bottom: 35px;
+    padding-bottom: 38px;
   }
 
   @media (min-width: $wide-width) {
@@ -104,10 +104,6 @@
     &--orange {
       order: 6;
     }
-  }
-
-  @media (min-width: $wide-width) {
-    width: 262px;
   }
 }
 

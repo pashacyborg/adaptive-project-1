@@ -1,22 +1,9 @@
-//.social {
-//
-//
-//  @media (min-width: $medium-width) {
-//    grid-column: 2 / 4;
-//    justify-content: start;
-//  }
-//
-//  @media (min-width: $wide-width) {
-//    grid-column: 3 / 5;
-//  }
-//}
-
 .social-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  width: 142px;
+  width: 140px;
   margin: 0 auto;
   padding: 0;
   list-style: none;

@@ -6,7 +6,7 @@
   @media (min-width: $medium-width) {
     grid-template-columns: repeat(4, 167px);
     background-color: $main-background-color-medium;
-    padding-top: 44px;
+    padding-top: 45px;
     padding-bottom: 50px;
   }
 
@@ -65,32 +65,6 @@
   color: $secondary-color;
   text-transform: uppercase;
 
-  //@media (max-width: $narrow-width-only) {
-  //  &--phone {
-  //    &::after {
-  //      position: absolute;
-  //      top: 8px;
-  //      right: 0;
-  //      content: "";
-  //      width: 200px;
-  //      height: 1px;
-  //      background-color: $secondary-color-lightest-type1;
-  //    }
-  //  }
-  //
-  //  &--email {
-  //    &::after {
-  //      position: absolute;
-  //      top: 10px;
-  //      right: 0;
-  //      content: "";
-  //      width: 182px;
-  //      height: 1px;
-  //      background-color: $secondary-color-lightest-type1;
-  //    }
-  //  }
-  //}
-
   @media (min-width: $medium-width) {
     grid-column: 1 / 2;
     box-sizing: content-box;
@@ -139,11 +113,11 @@
     &:hover {
       border-color: $secondary-color-lightest-type1;
 
-      & + .contact-details__icon g {
+      & + .contact-details__icon {
         opacity: 1;
       }
 
-      & + .contact-details__icon path {
+      & + .contact-details__icon {
         fill: $secondary-color-lightest-type1;
       }
     }
@@ -151,11 +125,11 @@
     &:active {
       border-color: $secondary-color-lightest-type1;
 
-      & + .contact-details__icon g {
+      & + .contact-details__icon {
         opacity: 1;
       }
 
-      & + .contact-details__icon path {
+      & + .contact-details__icon {
         fill: $secondary-color-lightest-type1;
       }
     }
@@ -166,7 +140,7 @@
     &:hover {
       border-color: $secondary-color-lightest-type1;
 
-      & + .contact-details__icon path {
+      & + .contact-details__icon {
         fill: $secondary-color-lightest-type1;
         opacity: 1;
       }
@@ -175,7 +149,7 @@
     &:active {
       border-color: $secondary-color-lightest-type1;
 
-      & + .contact-details__icon path {
+      & + .contact-details__icon {
         fill: $secondary-color-lightest-type1;
         opacity: 1;
       }
@@ -184,7 +158,6 @@
 
 
   @media (min-width: $medium-width) {
-    //grid-column: 2 / -1;
     flex-grow: 1;
     padding: 15px 75px 14px 17px;
     font-size: 19px;
@@ -206,11 +179,13 @@
   &--phone {
     right: 7px;
     bottom: 17px;
+    opacity: 0.2;
   }
 
   &--email {
     right: 3px;
-    bottom: 15px;
+    bottom: 9px;
+    opacity: 0.2;
   }
 
   @media (min-width: $medium-width) {
