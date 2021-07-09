@@ -1,10 +1,8 @@
 .page-footer {
   display: grid;
   grid-template-columns: 260px;
-  //grid-template-rows: minmax(80px, auto)
-  //                    minmax(80px, auto);
   justify-content: center;
-  margin-top: 55px;
+  margin-top: 39px;
   font-size: 19px;
   font-weight: 700;
   line-height: 18px;
@@ -12,12 +10,13 @@
 
   @media (min-width: $medium-width) {
     grid-template-columns: 668px;
-    grid-template-rows: minmax(143px, auto);
-    margin-top: 50px;
+    grid-template-rows: auto auto;
+    margin-top: 57px;
   }
 
   @media (min-width: $wide-width) {
     grid-template-columns: 1050px;
+    margin-top: 105px;
   }
 }
 
@@ -27,6 +26,27 @@
                       minmax(80px, auto);
 
   @media (min-width: $medium-width) {
+    box-sizing: content-box;
     display: flex;
+    height: 34px;
+    padding-top: 51px;
+    padding-bottom: 58px;
   }
+}
+
+.page-footer__logo {
+  display: none;
+  margin: 0;
+
+  @media (min-width: $medium-width) {
+    display: block;
+  }
+}
+
+.page-footer__logo-link {
+  display: block;
+}
+
+.page-footer__logo-image {
+  display: block;
 }

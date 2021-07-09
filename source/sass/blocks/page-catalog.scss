@@ -1,6 +1,6 @@
 .page-catalog__title {
   padding-top: 72px;
-  padding-bottom: 75px;
+  padding-bottom: 73px;
   margin: 0;
   font-size: 27px;
   line-height: 30px;
@@ -29,6 +29,7 @@
   }
 
   @media (min-width: $wide-width) {
+    margin-right: -3px;
     padding-bottom: 101px;
     font-size: 53px;
     line-height: 57px;

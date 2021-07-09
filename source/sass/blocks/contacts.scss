@@ -36,6 +36,7 @@
   line-height: 30px;
   font-weight: 700;
   color: $main-color;
+  margin-left: -1px;
 
   @media (min-width: $medium-width) {
     font-size: 43px;
@@ -51,7 +52,7 @@
     @media (min-width: $medium-width) {
       content: "";
       position: absolute;
-      bottom: -9px;
+      bottom: -6px;
       right: 3px;
       width: 47px;
       height: 81px;
@@ -61,7 +62,7 @@
     }
 
     @media (min-width: $wide-width) {
-      left: -112px;
+      left: -111px;
       bottom: -7px;
     }
   }
@@ -69,19 +70,22 @@
 
 .contacts__table {
   margin: 0;
+  margin-top: 13px;
   padding: 0;
   padding-top: 26px;
   font-size: 14px;
+  border-collapse: collapse;
 
   @media (min-width: $medium-width) {
     grid-column: 1 / -1;
     display: grid;
+    margin: 0;
     padding-top: 48px;
     font-size: 17px;
   }//Не применяется к wide width почему то
 
   @media (min-width: $wide-width) {
-    padding-top: 33px;
+    padding-top: 20px;
   }
 }
 
@@ -111,6 +115,7 @@
 .contacts__cell {
   margin: 0;
   padding: 0;
+  padding: 15px 0;
 
   &--key {
     width: 74px;
@@ -118,34 +123,59 @@
   }
 
   &--value {
-
+    padding-left: 3px;
   }
 
-  &--second-pair {
-    padding-top: 28px;
+  @media (min-width: $medium-width) {
+    padding: 0;
 
-    @media (min-width: $medium-width) {
-      padding-top: 0;
+    &--value {
+      padding-left: 4px;
     }
+  }
 
-    @media (min-width: $wide-width) {
-      padding-top: 28px;
+  @media (min-width: $wide-width) {
+    padding: 15px 0;
+
+    &--value {
+      padding-left: 3px;
     }
   }
 }
 
 .contacts__email {
+  position: relative;
   color: $main-color-lightest;
-  border-bottom: 1px solid $secondary-color-lightest-type1;
+  //border-bottom: 1px solid $secondary-color-lightest-type1;
 
   &:hover {
     color: $secondary-color-medium--hover;
     border-color: $secondary-color-medium--hover;
+
   }
 
   &:active {
     color: $secondary-color-medium--hover;
     border: none;
+
+    &::after {
+      opacity: 0.1;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    content: "";
+    width: 179px;
+    height: 1px;
+    background-color: $secondary-color-lightest-type1;
+
+    @media (min-width: $medium-width) {
+      width: 203px;
+      bottom: -4px;
+    }
   }
 }
 
@@ -155,7 +185,7 @@
 
 .contacts__map {
   min-height: 454px;
-  margin-top: 62px;
+  margin-top: 47px;
   background-image: url("../img/map-mobile@1x.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -165,7 +195,8 @@
   }
 
   @media (min-width: $medium-width) {
-    margin-top: 45px;
+    min-height: 457px;
+    margin-top: 48px;
     background-image: url("../img/map-tablet@1x.jpg");
 
     @media (min-resolution: 2dppx) {
@@ -187,10 +218,10 @@
 
 .contacts__to-contact {
   margin: 0;
-  padding-top: 40px;
+  padding-top: 42px;
 
   @media(min-width: $medium-width) {
-    padding-top: 59px;
+    padding-top: 55px;
   }
 
   @media (min-width: $wide-width) {

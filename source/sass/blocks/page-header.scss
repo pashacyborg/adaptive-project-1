@@ -4,7 +4,6 @@
   font-style: normal;
   font-weight: 700;
   color: $main-color;
-  //Тут должна быть тень, а не рамка
   border-top: 1px solid $frame-color;
 
   @media (min-width: $medium-width) {
@@ -12,6 +11,7 @@
     grid-template-columns: 1fr 320px 348px 1fr;
     grid-template-rows: minmax(88px, auto)
                         minmax(50px, auto);
+    border: none;
   }
 
   @media (min-width: $wide-width) {
@@ -23,6 +23,8 @@
   display: flex;
   margin: 0;
   min-height: 79px;
+  justify-content: center;
+  align-items: center;
 
   @media (min-width: $medium-width) {
     grid-column: 2 / 3;
@@ -34,15 +36,14 @@
   @media (min-width: $wide-width) {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
-    justify-content: center;
+    justify-content: normal;
+    margin-left: 30px;
+    margin-right: auto;
   }
 }
 
 .page-header__logo-link {
-  display: block;
-  margin: 0 auto;
-  margin-top: 22px;
-  //background: red;
+  display: flex;
 
   @media (min-width: $medium-width) {
     margin: 0;
@@ -51,6 +52,12 @@
   @media (min-width: $wide-width) {
 
   }
+}
+
+.page-header__logo-link picture {
+  display: flex;
+  width: auto;
+  height: auto;
 }
 
 .page-header__logo-link img {

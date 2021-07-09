@@ -11,6 +11,7 @@
 
   @media (min-width: $wide-width) {
     grid-template-columns: repeat(6, 175px);
+    padding-bottom: 37px;
   }
 }
 
