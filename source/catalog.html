@@ -75,8 +75,8 @@
               <h3 class="card__title card__title--bunny-jumper"><a class="card__title-link" href="bunny-jumper.html">Зайчик-попрыгайчик</a></h3>
               <p class="card__specifications card__specifications--bunny-jumper">Рост 30 см, вес 200 г</p>
               <p class="card__to-order card__to-order--bunny-jumper">
-                <b class="card__price">1 200 руб.</b>
-                <a class="card__link" href="#" aria-label="Добавить в корзину">
+                <b class="card__price card__price--bunny-jumper">1 200 руб.</b>
+                <a class="card__link card__link--bunny-jumper" href="#" aria-label="Добавить в корзину">
                   <svg class="card__icon" focusable="false" width="20.3" height="18.8">
                     <use xlink:href="img/sprite.svg#icon-card"></use>
                   </svg>
@@ -142,16 +142,19 @@
         </ul>
         <article class="catalog-article">
           <div class="catalog-article__wrapper">
-            <p class="catalog-article__image-wrapper">
-              <a href="" class="catalog-article__image-link">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/production-process-desktop@1x.webp 1x, img/production-process-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/production-process-tablet@1x.webp 1x, img/production-process-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/production-process-mobile@1x.webp 1x, img/production-process-mobile@2x.webp 2x">
-                  <source media="(min-width: 1150px)" srcset="img/production-process-desktop@1x.jpg 1x, img/production-process-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/production-process-tablet@1x.jpg 1x, img/production-process-tablet@2x.jpg 2x">
-                  <img class="catalog-article__image" src="img/production-process-mobile@1x.jpg" alt="Изображение зеленой корзинки">
-                </picture>
+            <p class="catalog-article__video-wrapper">
+              <picture>
+                <source type="image/webp" media="(min-width: 1150px)" srcset="img/production-process-desktop@1x.webp 1x, img/production-process-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/production-process-tablet@1x.webp 1x, img/production-process-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/production-process-mobile@1x.webp 1x, img/production-process-mobile@2x.webp 2x">
+                <source media="(min-width: 1150px)" srcset="img/production-process-desktop@1x.jpg 1x, img/production-process-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/production-process-tablet@1x.jpg 1x, img/production-process-tablet@2x.jpg 2x">
+                <img class="catalog-article__image" src="img/production-process-mobile@1x.jpg" alt="Изображение зеленой корзинки">
+              </picture>
+              <a class="catalog-article__video-link" href="#" aria-label="Нажать для просмотра видео">
+                <svg focusable="false" width="100.7" height="76.9">
+                  <use xlink:href="img/sprite.svg#icon-play"></use>
+                </svg>
               </a>
             </p>
             <h3 class="catalog-article__title"><a class="catalog-article__title-link">Процесс производства</a></h3>
@@ -166,9 +169,9 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <p class="page-footer__logo footer-logo">
-          <a class="footer-logo__link" href="index.html" aria-label="Логотип интернет-магазина «Мишка»">
-            <svg class="footer-logo__image" role="img" focusable="false" width="101.6" height="34.1" role="img">
+        <p class="page-footer__logo">
+          <a class="page-footer__logo-link" href="index.html" aria-label="Логотип интернет-магазина «Мишка»">
+            <svg class="page-footer__logo-image" role="img" focusable="false" width="101.6" height="34.1">
               <use xlink:href="img/sprite.svg#icon-logo-footer"></use>
             </svg>
           </a>

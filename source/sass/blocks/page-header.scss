@@ -4,7 +4,6 @@
   font-style: normal;
   font-weight: 700;
   color: $main-color;
-  //Тут должна быть тень, а не рамка
   border-top: 1px solid $frame-color;
 
   @media (min-width: $medium-width) {
@@ -12,6 +11,7 @@
     grid-template-columns: 1fr 320px 348px 1fr;
     grid-template-rows: minmax(88px, auto)
                         minmax(50px, auto);
+    border: none;
   }
 
   @media (min-width: $wide-width) {
@@ -36,7 +36,9 @@
   @media (min-width: $wide-width) {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
-    justify-content: center;
+    justify-content: normal;
+    margin-left: 30px;
+    margin-right: auto;
   }
 }
 

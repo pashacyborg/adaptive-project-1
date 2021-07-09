@@ -16,29 +16,20 @@
   }
 
   @media (min-width: $medium-width) {
-    min-height: 576px;
+    min-height: 577px;
     background-image: url("../img/cute-stuff-wide@1x.jpg");
-    background-position: center -51px;
+    background-position: center -50px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/cute-stuff-wide@2x.jpg");
       background-size: 1150px auto;
     }
   }
-
-  //@media (min-width: $wide-width) {
-  //  background-image: url("../img/cute-stuff-desktop@1x.jpg");
-  //
-  //  @media (min-resolution: 2dppx) {
-  //    background-image: url("../img/cute-stuff-desktop@2x.jpg");
-  //    background-size: 1150px auto;
-  //  }
-  //}
 }
 
 .page-main__title {
   margin: 0;
-  padding-top: 70px;
+  padding-top: 71px;
   font-size: 27px;
   line-height: 30px;
   font-weight: 700;
@@ -46,12 +37,13 @@
   text-align: center;
 
   @media (min-width: $medium-width) {
+    padding-top: 105px;
     font-size: 43px;
     line-height: 50px;
-    padding-top: 105px;
   }
 
   @media (min-width: $wide-width) {
+    padding-top: 108px;
     font-size: 53px;
     line-height: 57px;
   }
